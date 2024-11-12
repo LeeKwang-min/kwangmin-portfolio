@@ -13,7 +13,7 @@ function About() {
   return (
     <Section id="about" title="ABOUT ME" icon={<FaUser />} bgColor="bg-white">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="flex flex-col gap-4 pl-20">
+        <div className="flex flex-col gap-4 md:pl-20">
           <InfoItem icon={<FaUser />} label="이름" value="이광민" />
           <InfoItem
             icon={<FaGraduationCap />}
@@ -21,7 +21,7 @@ function About() {
             value="영남대학교 컴퓨터공학과"
           />
         </div>
-        <div className="flex flex-col gap-4 pl-20">
+        <div className="flex flex-col gap-4 md:pl-20">
           <InfoItem
             icon={<FaEnvelope />}
             label="이메일"
@@ -34,7 +34,7 @@ function About() {
             value="말 걸기 편한 개발자"
           />
         </div>
-        <div className="flex flex-col gap-4 pl-20">
+        <div className="flex flex-col gap-4 md:pl-20">
           <InfoItem
             icon={<FaBriefcase />}
             label="경력"

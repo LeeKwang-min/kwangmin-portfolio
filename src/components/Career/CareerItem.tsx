@@ -38,14 +38,14 @@ function CareerItem({ company }: ICareerItemProps) {
           <p className="text-gray-400 text-sm">{company.period}</p>
           <p className="text-gray-500 text-sm">{company.description}</p>
         </div>
-        <div className="flex items-center gap-2 mb-10">
-          <span className="px-2 py-1 rounded-lg bg-blue-500 text-white text-sm">
+        <div className="flex flex-col md:items-center gap-2 mb-10 md:flex-row">
+          <span className="px-2 py-1 rounded-lg bg-blue-500 text-white text-sm w-fit">
             Next.js 개발
           </span>
-          <span className="px-2 py-1 rounded-lg bg-blue-500 text-white text-sm">
+          <span className="px-2 py-1 rounded-lg bg-blue-500 text-white text-sm w-fit">
             프로젝트 리딩
           </span>
-          <span className="px-2 py-1 rounded-lg bg-blue-500 text-white text-sm">
+          <span className="px-2 py-1 rounded-lg bg-blue-500 text-white text-sm w-fit">
             최적화
           </span>
         </div>
