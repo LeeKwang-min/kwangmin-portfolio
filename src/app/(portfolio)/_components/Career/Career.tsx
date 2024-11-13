@@ -13,6 +13,12 @@ const careers = [
     description: "삶에 건강을 더하고, 가치를 더하는 디지털 헬스케어 플랫폼",
     projects: [
       {
+        title: "PUDDING (음식 인식 서비스)",
+        period: "2024.08 - 진행중",
+        description:
+          "프로젝트 리딩(기획/디자인/개발), 모바일 친화적 UI/UX 개발, PWA 적용",
+      },
+      {
         title: "프로토콜 어드민",
         period: "2023.12 - 진행중",
         description:
