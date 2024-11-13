@@ -20,7 +20,8 @@ const projects = [
       "API 호출 최적화",
       "꾸준한 운영과 개선 포스팅 진행중",
     ],
-    url: "https://pullog.vercel.app/",
+    gitUrl: "https://github.com/LeeKwang-min/pullog",
+    serviceUrl: "https://pullog.vercel.app/",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
   },
   {
@@ -34,7 +35,8 @@ const projects = [
       '유저 인터랙션을 중요시하는 "나"를 소개하는 웹사이트',
       "흥미를 끌 수 있는 다양한 애니메이션 적용",
     ],
-    url: "https://kwangmin-portfolio.vercel.app/",
+    gitUrl: "https://github.com/LeeKwang-min/kwangmin-portfolio",
+    serviceUrl: "https://kwangmin-portfolio.vercel.app/",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
   },
 ];

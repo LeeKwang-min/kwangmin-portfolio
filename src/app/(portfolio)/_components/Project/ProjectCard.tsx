@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
+import ShortcutButton from "./ShortcutButton";
+import { GitBranch, Wrench } from "lucide-react";
 
 interface IProjectCardProps {
   project: {
@@ -11,7 +13,8 @@ interface IProjectCardProps {
     period: string;
     subtitle: string;
     description: string[];
-    url: string;
+    gitUrl: string;
+    serviceUrl: string;
     technologies: string[];
   };
   initialFlipped?: boolean;
@@ -66,20 +69,21 @@ function ProjectCard({ project, initialFlipped = false }: IProjectCardProps) {
             </ul>
           </div>
           <div>
-            <p className="text-sm mb-2">
-              <strong>URL:</strong>{" "}
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
-              >
-                {project.url}
-              </a>
-            </p>
-            <p className="text-sm">
+            <p className="text-sm mb-4">
               <strong>기술:</strong> {project.technologies.join(", ")}
             </p>
+            <div className="flex items-center gap-4">
+              <ShortcutButton
+                icon={<Wrench className="h-5 w-5" />}
+                label="Service"
+                href={project.serviceUrl}
+              />
+              <ShortcutButton
+                icon={<GitBranch className="h-5 w-5" />}
+                label="Git"
+                href={project.gitUrl}
+              />
+            </div>
           </div>
         </div>
       )}
