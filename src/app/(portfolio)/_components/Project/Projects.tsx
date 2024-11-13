@@ -1,8 +1,8 @@
 import { FaLightbulb } from "react-icons/fa";
 import Section from "../Common/Section";
 import ProjectCard from "./ProjectCard";
-import PullogLogo from "@/../../public/pulloglogo.png";
-import BGImg from "@/../../public/bg.jpeg";
+import PullogLogo from "@/../public/assets/pulloglogo.png";
+import BGImg from "@/../public/assets/bg.jpeg";
 
 const projects = [
   {

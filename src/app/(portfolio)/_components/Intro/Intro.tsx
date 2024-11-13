@@ -1,6 +1,6 @@
 import Image from "next/image";
 import TypeWriter from "./TypeWriter";
-import BGImg from "@/../public/bg.jpeg";
+import BGImg from "@/../public/assets/bg.jpeg";
 
 const phrases = [
   "도메인에 관심을 가지고 이해하는 프론트엔드 개발자",

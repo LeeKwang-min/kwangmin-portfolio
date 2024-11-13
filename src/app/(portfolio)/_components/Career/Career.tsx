@@ -1,7 +1,7 @@
 import { FaHistory } from "react-icons/fa";
 import Section from "../Common/Section";
 import CareerItem from "./CareerItem";
-import HurayLogo from "@/../../public/huraylogo.png";
+import HurayLogo from "@/../public/assets/huraylogo.png";
 
 const careers = [
   {
