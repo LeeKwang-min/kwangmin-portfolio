@@ -1,7 +1,7 @@
 import { FaHistory } from "react-icons/fa";
 import Section from "../Common/Section";
 import CareerItem from "./CareerItem";
-import HurayLogo from "../../../public/huraylogo.png";
+import HurayLogo from "@/../../public/huraylogo.png";
 
 const careers = [
   {
@@ -16,18 +16,17 @@ const careers = [
         title: "프로토콜 어드민",
         period: "2023.12 - 진행중",
         description:
-          "기획, 디자인, 개발 진행, react-hook-form 도입, 이벤트 최적화",
+          "프로젝트 리딩(기획/디자인/개발), 유저 친화적인 API 호출 방식 채택",
       },
       {
         title: "헬스케어 서비스 어드민",
         period: "2022.10 - 2023.12",
-        description: "프로젝트 리딩, 리렌더링 최적화, 공통 차트/모달 개발",
+        description: "프로젝트 리딩, 공통 모달 개발, Chart.js 모듈화",
       },
       {
         title: "질병 예측 서비스",
         period: "2022.06 - 2022.10",
-        description:
-          "API 호출 코드 개선, Sentry 도입, 다국어 처리, 크로스 플랫폼 지원",
+        description: "Sentry 도입, 다국어 처리, 크로스 플랫폼 지원",
       },
       // 추가 프로젝트...
     ],

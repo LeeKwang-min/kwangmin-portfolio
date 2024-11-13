@@ -33,6 +33,9 @@ function Intro() {
       <div className="relative z-20 text-center">
         <h1 className="text-5xl font-bold mb-6 text-white">{`" 이광민 "`}</h1>
         <p className="text-xl text-gray-200 h-8">안녕하세요.</p>
+        <p className="text-xl text-gray-200 h-8">
+          언제나 유저의 입장에서 고민하는
+        </p>
         <p className="text-xl text-gray-200 h-12">
           프론트엔드 개발자 이광민입니다.
         </p>
