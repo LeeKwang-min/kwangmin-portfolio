@@ -28,16 +28,8 @@ const skillList = [
         description: "Redux, Recoil, Tanstack-Query",
       },
       {
-        name: "폼 관리",
-        description: "React-Hook-Form",
-      },
-      {
-        name: "테이블 관리",
-        description: "Tanstack-Table",
-      },
-      {
-        name: "일관된 UI 관리",
-        description: "Shadcn UI",
+        name: "UI/상태 관리",
+        description: "React-Hook-Form, Tanstack-Table, Shadcn UI",
       },
     ],
   },
@@ -77,16 +69,17 @@ function Skill() {
   return (
     <section className="mb-12">
       <h2 className="text-3xl font-semibold mb-4 border-b-2 pb-2">SKILLS</h2>
-      <div className="space-y-6">
+      <div className="space-y-6 flex flex-wrap gap-4">
         {skillList.map((item) => (
-          <div key={item.title}>
+          <div key={item.title} className="border-l-4 border-gray-200 pl-4">
             <h3 className="text-2xl font-semibold mb-2 text-gray-700">
               {item.title}
             </h3>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside space-y-2">
               {item.skills.map((skill) => (
-                <li key={skill.name}>
-                  {skill.name}: {skill.description}
+                <li key={skill.name} className="flex flex-col gap-1">
+                  <span className="font-semibold">{skill.name}</span>
+                  <span className="text-gray-600">{skill.description}</span>
                 </li>
               ))}
             </ul>

@@ -26,7 +26,7 @@ function Work() {
   return (
     <section>
       <h2 className="text-3xl font-semibold mb-4 border-b-2 pb-2">
-        ADDITIONAL EXPERIENCES
+        ADDITIONAL
       </h2>
       <div className="space-y-4">
         {workList.map((item) => (

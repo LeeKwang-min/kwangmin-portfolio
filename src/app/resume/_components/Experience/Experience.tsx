@@ -17,52 +17,47 @@ const experienceList = [
     projects: [
       {
         title: "사내 서비스 통합 관리 백오피스 프로젝트",
-        tasks: [""],
+        tasks: [
+          "클라이언트 기획부터 디자인, 개발까지 주도하여 리딩",
+          "Debounce를 활용한 UI를 적용하여 성능 최적화 및 사용자 경험 개선",
+          "수작업으로 진행되던 프로세스를 로직/자동화하여 사용자 편의성 향상",
+          "실제 사용자의 피드백을 반영한 UX 개선 및 효율성 향상",
+          "A/B 테스트를 통해 사용자 효율성과 편의성 향상",
+          "실제 사용자와의 꾸준한 소통을 통한 요구사항의 이해와 개발 진행",
+        ],
         stacks: [
           "React, TypeScript, Next.js, Tanstack-Table, React-Hook-Form, Tailwind CSS, Shadcn UI",
         ],
       },
       {
         title: "음식 인식 애플리케이션 프로젝트",
-        tasks: [""],
+        tasks: [
+          "PWA 적용을 통한 모바일 최적화 진행",
+          "반응형 디자인을 적용하여 웹과 모바일 환경에서 자연스러운 UI 제공",
+          "Next-Auth와 Middleware를 활용한 클라이언트 단독 인증 시스템 구현",
+          "도메인 이해를 바탕으로 추가 기능 기획 및 개발",
+        ],
         stacks: [
-          "React, TypeScript, Next.js, Next-Auth, Next-PWA, Tailwind CSS, Shadcn UI",
+          "React, TypeScript, Next.js, Tailwind CSS, Shadcn UI, Next-Auth, Next-PWA",
         ],
       },
       {
         title: "헬스케어 서비스 및 백오피스 웹 애플리케이션 개발",
-        tasks: [""],
+        tasks: [
+          "Sentry를 통한 에러 추적 및 모니터링",
+          "웹 뷰 프로젝트 개발 진행",
+          "반응형 디자인 개발",
+          "디자인 시스템 개발 진행",
+          "공통 차트 컴포넌트 개발",
+          "상태 관리 라이브러리를 통한 데이터 관리 및 렌더링 최적화",
+          "i18n을 통한 다국어 지원",
+        ],
         stacks: [
-          "React, TypeScript, Next.js, Recoil, Tanstack-Query, React-Hook-Form, Tailwind CSS",
+          "React, TypeScript, Next.js, Recoil, Chart.js, Axios, Tanstack-Query, React-Hook-Form, Tailwind CSS",
         ],
       },
     ],
   },
-  // {
-  //   company: "개인 프로젝트",
-  //   position: "1인 기획 및 풀스택 개발",
-  //   period: "2023.03 - 2023.05",
-  //   description: "Next.js를 활용한 개인 블로그 플랫폼 개발",
-  //   tasks: [
-  //     "Next.js를 활용한 개인 블로그 플랫폼 개발",
-  //     "SSR을 활용한 SEO 최적화",
-  //     "마크다운 에디터 구현",
-  //     "댓글 시스템 개발",
-  //     "반응형 디자인 적용",
-  //   ],
-  //   projects: [
-  //     {
-  //       title: "서비스 관리 백오피스 프로젝트",
-  //       tasks: [
-  //         "Next.js를 활용한 개인 블로그 플랫폼 개발",
-  //         "SSR을 활용한 SEO 최적화",
-  //         "마크다운 에디터 구현",
-  //         "반응형 디자인 적용",
-  //       ],
-  //       stacks: ["Next.js, TypeScript, MongoDB, TailwindCSS"],
-  //     },
-  //   ],
-  // },
 ];
 
 function Experience() {
@@ -82,30 +77,30 @@ function Experience() {
             </div>
             <div className="w-full md:w-2/3 space-y-4">
               <div className="border-l-4 border-gray-200 pl-4">
-                <h4 className="text-xl font-semibold text-gray-700">
+                <h4 className="text-xl font-semibold text-gray-900">
                   {item.position}
                 </h4>
                 <p className="mb-2">{item.description}</p>
-                <h5 className="text-lg font-semibold text-gray-600 mb-2">
+                <h5 className="text-lg font-semibold text-gray-800 mb-2">
                   주요 업무
                 </h5>
-                <ul className="mb-2 flex flex-col gap-2">
+                <ul className="mb-2 flex flex-col gap-2 pb-4">
                   {item.tasks.map((task) => (
                     <li key={task}>{`- ${task}`}</li>
                   ))}
                 </ul>
                 {item.projects.map((project) => (
-                  <div key={project.title} className="mt-8 border-b-2 pb-4">
+                  <div key={project.title} className="border-b-2 py-6">
                     <h5 className="text-lg font-semibold text-gray-600 mb-2">
                       {project.title}
                     </h5>
-                    <ul className="list-disc list-inside mb-2">
+                    <ul className="list-disc list-inside mb-2 leading-8">
                       {project.tasks.map((task) => (
                         <li key={task}>{task}</li>
                       ))}
                     </ul>
                     <h5 className="text-lg font-semibold text-gray-600 mb-2">
-                      사용 기술
+                      기술 스택
                     </h5>
                     <p className="text-sm text-gray-600">
                       {project.stacks?.join(", ")}

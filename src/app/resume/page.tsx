@@ -4,6 +4,7 @@ import Introduction from "./_components/Introduction/Introduction";
 import Experience from "./_components/Experience/Experience";
 import Skill from "./_components/Skill/Skill";
 import Work from "./_components/Work/Work";
+import OtherExperience from "./_components/Experience/OtherExperience";
 
 const Resume = () => {
   return (
@@ -12,6 +13,7 @@ const Resume = () => {
         <Information />
         <Introduction />
         <Experience />
+        <OtherExperience />
         <Skill />
         <Work />
       </div>
