@@ -19,6 +19,7 @@ const experienceList = [
         title: "사내 서비스 통합 관리 백오피스 프로젝트",
         tasks: [
           "클라이언트 기획부터 디자인, 개발까지 주도하여 리딩",
+          "Jira를 통한 유저 스토리 정의 및 프로젝트 관리",
           "Debounce를 활용한 UI를 적용하여 성능 최적화 및 사용자 경험 개선",
           "수작업으로 진행되던 프로세스를 로직/자동화하여 사용자 편의성 향상",
           "실제 사용자의 피드백을 반영한 UX 개선 및 효율성 향상",
@@ -44,13 +45,15 @@ const experienceList = [
       {
         title: "헬스케어 서비스 및 백오피스 웹 애플리케이션 개발",
         tasks: [
+          "Git을 활용한 코드 리뷰 및 커밋 컨벤션 정의",
+          "Confluence를 통한 문서 관리 및 공유",
           "Sentry를 통한 에러 추적 및 모니터링",
-          "웹 뷰 프로젝트 개발 진행",
-          "반응형 디자인 개발",
+          "웹뷰 프로젝트 개발 진행",
           "디자인 시스템 개발 진행",
           "공통 차트 컴포넌트 개발",
           "상태 관리 라이브러리를 통한 데이터 관리 및 렌더링 최적화",
           "i18n을 통한 다국어 지원",
+          "RESTful API 활용",
         ],
         stacks: [
           "React, TypeScript, Next.js, Recoil, Chart.js, Axios, Tanstack-Query, React-Hook-Form, Tailwind CSS",

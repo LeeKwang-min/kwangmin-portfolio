@@ -11,17 +11,16 @@ const skillList = [
       },
       {
         name: "Next.js",
-        description: "적절한 SSR을 활용하여 SEO 최적화 및 성능 향상",
+        description: "SSR을 활용하여 SEO 최적화 및 성능 향상",
       },
       {
         name: "TypeScript",
-        description:
-          "정적 타입 시스템을 활용한 안정적이고 유지보수가 쉬운 코드 작성",
+        description: "안정적이고 유지보수가 쉬운 코드 작성",
       },
       {
         name: "HTML/CSS",
         description:
-          "시맨틱 마크업, 반응형 디자인, CSS-in-JS (Styled-Components, Tailwind CSS)",
+          "시맨틱 마크업, 반응형 디자인, CSS-in-JS (Emotion, Tailwind CSS)",
       },
       {
         name: "서버/클라이언트 상태 관리",
@@ -63,13 +62,30 @@ const skillList = [
       },
     ],
   },
+  {
+    title: "Tools",
+    skills: [
+      {
+        name: "Jira",
+        description: "프로젝트 일정 및 타임라인 관리",
+      },
+      {
+        name: "Confluence",
+        description: "프로젝트 문서 관리",
+      },
+      {
+        name: "Figma",
+        description: "기획 및 디자인 협업 툴",
+      },
+    ],
+  },
 ];
 
 function Skill() {
   return (
     <section className="mb-12">
       <h2 className="text-3xl font-semibold mb-4 border-b-2 pb-2">SKILLS</h2>
-      <div className="space-y-6 flex flex-wrap gap-4">
+      <div className="space-y-6 gap-4 grid grid-cols-2">
         {skillList.map((item) => (
           <div key={item.title} className="border-l-4 border-gray-200 pl-4">
             <h3 className="text-2xl font-semibold mb-2 text-gray-700">
