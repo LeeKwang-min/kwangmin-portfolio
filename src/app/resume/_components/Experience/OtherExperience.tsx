@@ -1,9 +1,9 @@
 const othenExperienceList = [
   {
     company: "개인 프로젝트",
-    position: "1인 기획 및 풀스택 개발",
+    position: "1인 기획 및 백엔드 경험이 목표",
     period: "",
-    description: "익숙한 기술과 새로운 기술을 학습하여 적용한 개인 프로젝트",
+    description: "",
     tasks: [
       "백엔드부터 프론트엔드까지 풀스택 개발 경험",
       "'서비스' 도메인에 대한 경험과 사고",
@@ -16,16 +16,15 @@ const othenExperienceList = [
         title: "Pullog - 풀업 기록 관리 분석 서비스",
         URL: "https://pullog.vercel.app/",
         tasks: [
-          "'서비스' 도메인에 맞는 기획과 디자인 적용",
-          "Next.js를 활용한 SEO 최적화 및 성능 향상",
-          "Supabase를 활용한 인증/인가 및 데이터 관리",
-          "백엔드부터 프론트엔드까지 풀스택 개발 경험",
-          "PWA를 적용한 서비스 출시",
-          "꾸준한 개선과 피드백 반영",
-          "반응형 디자인을 적용하여 데스크톱, 모바일 환경 모두 사용 가능",
-          "블로그 포스팅을 통한 프로젝트 기록",
+          "Next.js를 활용한 SEO 최적화/향상",
+          "Supabase를 활용하여 인증/인가 부터 데이터 관리의 백엔드 포지션 경험",
+          "PWA를 적용하여 웹 앱 출시, 접속에 용이한 서비스 제공",
+          "반응형 디자인을 적용하여 데스크톱, 모바일 환경 모두 익숙한 사용자 경험 제공",
+          "내가 좋아하는 도메인을 이해하고 기획하여 서비스 출시",
         ],
-        stacks: ["Next.js, TypeScript, Supabase, Shadcn UI, TailwindCSS"],
+        stacks: [
+          "Next.js, TypeScript, Supabase, Shadcn UI, TailwindCSS, Recharts",
+        ],
       },
     ],
   },
@@ -52,14 +51,14 @@ function OtherExperience() {
                   {item.position}
                 </h4>
                 <p className="mb-2">{item.description}</p>
-                <h5 className="text-lg font-semibold text-gray-800 mb-2">
-                  주요 업무
+                {/* <h5 className="text-lg font-semibold text-gray-800 mb-2">
+                  주요 내용
                 </h5>
                 <ul className="mb-2 flex flex-col gap-2 pb-4">
                   {item.tasks.map((task) => (
                     <li key={task}>{`- ${task}`}</li>
                   ))}
-                </ul>
+                </ul> */}
                 {item.projects.map((project) => (
                   <div key={project.title} className="border-b-2 py-6">
                     <h5 className="text-lg font-semibold text-gray-600">

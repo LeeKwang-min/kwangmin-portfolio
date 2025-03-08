@@ -5,29 +5,28 @@ const skillList = [
     title: "Frontend",
     skills: [
       {
-        name: "React",
-        description:
-          "컴포넌트 기반 개발, Hooks 활용, 상태 관리 (Redux, Recoil)",
+        name: "React (상급)",
+        description: "컴포넌트 기반 개발, Hooks 활용, 상태 관리",
       },
       {
-        name: "Next.js",
-        description: "SSR을 활용하여 SEO 최적화 및 성능 향상",
+        name: "Next.js (상급)",
+        description: "SSR을 활용하여 SEO 최적화 및 Client에 필요한 API 작성",
       },
       {
-        name: "TypeScript",
+        name: "TypeScript (상급)",
         description: "안정적이고 유지보수가 쉬운 코드 작성",
       },
       {
-        name: "HTML/CSS",
+        name: "HTML/CSS (상급)",
         description:
           "시맨틱 마크업, 반응형 디자인, CSS-in-JS (Emotion, Tailwind CSS)",
       },
       {
-        name: "서버/클라이언트 상태 관리",
-        description: "Redux, Recoil, Tanstack-Query",
+        name: "서버/클라이언트 상태 관리 (상급)",
+        description: "Recoil, Tanstack-Query",
       },
       {
-        name: "UI/상태 관리",
+        name: "UI/상태 관리 (상급)",
         description: "React-Hook-Form, Tanstack-Table, Shadcn UI",
       },
     ],
@@ -36,11 +35,11 @@ const skillList = [
     title: "Backend",
     skills: [
       {
-        name: "Supabase",
+        name: "Supabase (초급)",
         description: "Auth, Database, Storage 등 백엔드 서비스 활용",
       },
       {
-        name: "Node.js",
+        name: "Node.js (중급)",
         description: "Express 프레임워크를 이용한 RESTful API 개발",
       },
     ],
@@ -49,15 +48,15 @@ const skillList = [
     title: "DevOps",
     skills: [
       {
-        name: "Version Control",
+        name: "Version Control (상급)",
         description: "Git, GitHub",
       },
       {
-        name: "Deployment",
+        name: "Deployment (중급)",
         description: "Vercel",
       },
       {
-        name: "Docker",
+        name: "Docker (초급)",
         description: "컨테이너화된 애플리케이션 배포",
       },
     ],
@@ -66,15 +65,15 @@ const skillList = [
     title: "Tools",
     skills: [
       {
-        name: "Jira",
+        name: "Jira (중급)",
         description: "프로젝트 일정 및 타임라인 관리",
       },
       {
-        name: "Confluence",
+        name: "Confluence (상급)",
         description: "프로젝트 문서 관리",
       },
       {
-        name: "Figma",
+        name: "Figma (중급)",
         description: "기획 및 디자인 협업 툴",
       },
     ],
