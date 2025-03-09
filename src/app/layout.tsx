@@ -13,6 +13,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const pretendard = localFont({
+  src: "./fonts/PretendardVariable.woff2",
+  variable: "--font-pretendard",
+  weight: "100 900",
+});
 
 export const metadata: Metadata = {
   title: "이광민 | Kwangmin Lee",
@@ -27,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${pretendard.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* <PdfHeader /> */}
         {children}

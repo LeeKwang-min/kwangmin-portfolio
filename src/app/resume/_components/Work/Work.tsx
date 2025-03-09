@@ -25,9 +25,7 @@ const workList = [
 function Work() {
   return (
     <section>
-      <h2 className="text-3xl font-semibold mb-4 border-b-2 pb-2">
-        ADDITIONAL
-      </h2>
+      <h2 className="text-3xl font-semibold mb-4">Additional</h2>
       <div className="space-y-4">
         {workList.map((item) => (
           <div key={item.title}>

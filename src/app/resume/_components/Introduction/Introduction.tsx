@@ -2,8 +2,8 @@ import React from "react";
 
 function Introduction() {
   return (
-    <section className="mb-12">
-      <h2 className="text-3xl font-semibold mb-4 border-b-2 pb-2">ABOUT ME</h2>
+    <section className="mb-4 border-b-[1.5px] border-[#E5E5E5] pb-8">
+      <h2 className="text-3xl font-semibold pb-2">About Me</h2>
       {/* <p className="text-lg leading-8">{introduction}</p> */}
       <ul className="list-disc list-inside text-base leading-8">
         <li>
