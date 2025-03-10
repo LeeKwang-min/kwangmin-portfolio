@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function OtherExperience() {
   return (
-    <section className="mb-4 border-b-[1.5px] border-[#E5E5E5] pb-8">
+    <section className="mb-4 pb-20">
       <h2 className="text-3xl font-semibold mb-4 pb-2">
         Additional Experiences
       </h2>

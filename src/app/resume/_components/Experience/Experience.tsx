@@ -18,7 +18,7 @@ function Experience() {
   };
 
   return (
-    <section className="mb-4 border-b-[1.5px] border-[#E5E5E5] pb-8">
+    <section className="mb-4 pb-20">
       <h2 className="text-3xl font-semibold mb-4 pb-2">Work Experience</h2>
       <div className="space-y-8 relative flex flex-col gap-8">
         <div className="flex flex-col md:flex-row">
@@ -105,13 +105,13 @@ function Experience() {
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`화살표와 엔터키를 사용한 검색어 선택 및 탐색 기능을 추가하여 사용자 편의성 강화`}
+                      {`화살표와 엔터키를 사용한 검색어 선택 및 탐색 기능을 추가하여 사용자 편의성 제공`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`Form에 포커스, Tabindex 설정으로 사용자의 입력 순서에 대한 순차적 접근성 강화`}
+                      {`Form에 포커스, Tabindex 설정으로 사용자의 입력 순서에 대한 순차적 접근 제공`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
@@ -153,19 +153,13 @@ function Experience() {
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`데이터 실시간 필터(드롭다운, 태그 등)에 Debounce 적용, 필터링이 끝난 후 서버 호출`}
+                      {`실시간 데이터 변화가 필요한 곳에 Debounce 필터 적용, 서버 호출 횟수 감소`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
                       {`검색 버튼에 Throttling 적용, 다중 클릭에 대한 API 이중 호출 방지`}
-                    </span>
-                  </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
-                      {`동적 Select에 Debounce 적용, 선택이 끝난 후 서버 호출`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
@@ -210,7 +204,7 @@ function Experience() {
           </div>
         </div>
 
-        {/* 음식 인식 애플리케이션션 */}
+        {/* 음식 사진 인식 애플리케이션션 */}
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8">
             <h4 className="font-semibold flex justify-end w-full gap-2">
@@ -221,10 +215,10 @@ function Experience() {
           <div className="w-full md:w-2/3 flex flex-col pl-8 gap-[24px]">
             <div className="flex flex-col">
               <h5 className="text-[22px] font-bold">
-                {`음식 인식 애플리케이션`}
+                {`음식 사진 인식 애플리케이션`}
               </h5>
               <p className="font-bold text-[#00000080]">
-                {`"음식을 인식하여 영양 정보를 제공하는 애플리케이션"`}
+                {`"음식 사진을 인식하여 영양 정보를 제공하는 애플리케이션"`}
               </p>
             </div>
             <div className="flex flex-col gap-4 pl-2">
