@@ -37,17 +37,23 @@ function Experience() {
               <Quote
                 size={16}
                 color="#00000090"
-                className="h-10 transform scale-x-[-1]"
+                fill="#00000080"
+                className="h-10 transform scale-x-[-1] border-none"
               />
               {`UX 중심의 백오피스 및 서비스 개발/유지보수로 비즈니스 가치 향상`}
-              <Quote size={16} color="#00000090" className="h-10" />
+              <Quote
+                size={16}
+                color="#00000090"
+                fill="#00000080"
+                className="h-10 border-none"
+              />
             </p>
           </div>
         </div>
 
         {/* KB 검진 대행 사용자 서비스 */}
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8">
+          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8 pt-2">
             <h4 className="font-semibold flex justify-end w-full gap-2">
               <span className="font-bold">{`(진행중)`}</span>
               2024.12 ~
@@ -64,24 +70,12 @@ function Experience() {
             </div>
             <div className="flex flex-col gap-4 pl-2">
               <div className="flex flex-col gap-1">
-                <span className="font-semibold">SSO인증/인가 기능 개발</span>
-                <ul className="pl-2">
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
-                      {`암호화된 토큰을 정재하여 서버에 전달, 받아온 유저 정보를 통해 인증/인가 처리`}
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col gap-1">
                 <span className="font-semibold">성능 최적화</span>
                 <ul className="pl-2">
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`검색어 추천/자동 완성 기능에 Debounce 적용, 검색어 입력이 끝난 후 서버 호출`}
+                      {`추천 검색어 호출 기능에 Debounce 적용, 서버 호출 횟수 감소`}
                     </span>
                   </li>
                 </ul>
@@ -93,34 +87,32 @@ function Experience() {
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`쿼리 파라미터를 활용하여 페이지 이동, 공유 시 검색 조건이 유지되도록 처리`}
+                      {`모바일 환경에서 SMS 수신시 인증번호 자동 입력 기능 개발`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`모바일 환경에서 인증번호 SMS 수신시 자동 입력 기능을 추가하여 사용자 입력 시간 감소`}
+                      {`화살표와 엔터키를 사용한 검색어 선택 및 탐색 기능 개발`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`화살표와 엔터키를 사용한 검색어 선택 및 탐색 기능을 추가하여 사용자 편의성 제공`}
+                      {`Tabindex와 포커스 설정, 스크롤 이동으로로 입력 순서 편의성 개선`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`Form에 포커스, Tabindex 설정으로 사용자의 입력 순서에 대한 순차적 접근 제공`}
-                    </span>
-                  </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
-                      {`검색어 입력창 포커스시 추천 검색어 선택에 최적화된 위치로 페이지 스크롤 이동`}
+                      {`쿼리 파라미터를 사용하여 페이지 이동, 공유 시 검색 조건 유지`}
                     </span>
                   </li>
                 </ul>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold">SSO인증/인가 기능 개발</span>
               </div>
             </div>
           </div>
@@ -128,7 +120,7 @@ function Experience() {
 
         {/* 라이프로그 통합 관리 백오피스 */}
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8">
+          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8 pt-2">
             <h4 className="font-semibold flex justify-end w-full gap-2">
               <span className="font-bold">{`(약 1년)`}</span>
               2024.01 - 2024.12
@@ -153,12 +145,6 @@ function Experience() {
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`실시간 데이터 변화가 필요한 곳에 Debounce 필터 적용, 서버 호출 횟수 감소`}
-                    </span>
-                  </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
                       {`검색 버튼에 Throttling 적용, 다중 클릭에 대한 API 이중 호출 방지`}
                     </span>
                   </li>
@@ -166,6 +152,12 @@ function Experience() {
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
                       {`Lazy Loading 적용 및 코드 스플리팅을 통한 초기 로딩 속도 개선`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`실시간 데이터 변화가 필요한 곳에 Debounce 필터 적용, 서버 호출 횟수 감소`}
                     </span>
                   </li>
                 </ul>
@@ -177,19 +169,25 @@ function Experience() {
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`사용자별 정렬 순서를 브라우저 저장소에 저장하여 선호하는 정렬 순서 유지`}
+                      {`생성중인 미디어가 사용될 서비스 화면의 미리보기 기능 제공`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`토스트 메시지와 로딩 UI를 통한 API 요청과 결과에 대한 즉각적인 피드백 제공`}
+                      {`플로우 차트로 복잡한 라이프로그 간의 연결 관계 시각화`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`Form 입력시 사용자 입력 검증에 대한 즉각적인 피드백 제공`}
+                      {`정렬 순서를 브라우저 저장소에 저장, 유저별 선호하는 정렬 순서 유지`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`자주 사용된 라이프로그 정보를 상단에 노출되도록 처리`}
                     </span>
                   </li>
                 </ul>
@@ -206,7 +204,7 @@ function Experience() {
 
         {/* 음식 사진 인식 애플리케이션션 */}
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8">
+          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8 pt-2">
             <h4 className="font-semibold flex justify-end w-full gap-2">
               <span className="font-bold">{`(약 4개월)`}</span>
               2024.06 - 2024.09
@@ -277,7 +275,7 @@ function Experience() {
 
         {/* 임직원 코칭 백오피스 */}
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8">
+          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8 pt-2">
             <h4 className="font-semibold flex justify-end w-full gap-2">
               <span className="font-bold">{`(약 1년 4개월)`}</span>
               2023.02 - 2024.05
@@ -330,7 +328,7 @@ function Experience() {
 
         {/* KB오케어 헬스케어 서비스 */}
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8">
+          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8 pt-2">
             <h4 className="font-semibold flex justify-end w-full gap-2">
               <span className="font-bold">{`(약 11개월)`}</span>
               2022.02 - 2022.12
@@ -401,7 +399,7 @@ function Experience() {
           </div>
         </div>
 
-        <div className="border-l-4 border-gray-200 hidden md:block absolute left-1/3 h-[calc(100%-24px)]" />
+        <div className="border-l-4 border-gray-200 hidden md:block absolute left-1/3 -top-8 h-full" />
       </div>
     </section>
   );

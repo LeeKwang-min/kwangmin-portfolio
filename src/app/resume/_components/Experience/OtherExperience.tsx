@@ -52,7 +52,7 @@ function OtherExperience() {
           </div>
         </div>
 
-        <div className="border-l-4 border-gray-200 hidden md:block absolute left-1/3 h-[calc(100%-24px)]" />
+        <div className="border-l-4 border-gray-200 hidden md:block absolute left-1/3 -top-8 h-full" />
       </div>
     </section>
   );

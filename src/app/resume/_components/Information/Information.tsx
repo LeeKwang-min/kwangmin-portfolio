@@ -7,9 +7,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 import { FaEnvelope, FaBlog, FaGithub, FaLinkedin } from "react-icons/fa";
-import LKM from "@/../public/assets/lkm.jpeg";
+// import Image from "next/image";
+// import LKM from "@/../public/assets/lkm.jpeg";
 
 const informationList = [
   {
@@ -57,7 +57,7 @@ const skillList = [
 function Information() {
   return (
     <section className="mb-4 flex flex-col md:flex-row items-end md:items-end pb-20">
-      <div className="w-52 h-52 mb-4 md:mb-0 md:mr-8 relative">
+      {/* <div className="w-52 h-52 mb-4 md:mb-0 md:mr-8 relative">
         <Image
           src={LKM}
           alt="Profile"
@@ -65,7 +65,7 @@ function Information() {
           objectFit="contain"
           objectPosition="center"
         />
-      </div>
+      </div> */}
       <div className="flex gap-8">
         <div className="flex flex-col gap-4">
           <h1 className="text-3xl font-semibold pb-2">이광민</h1>
