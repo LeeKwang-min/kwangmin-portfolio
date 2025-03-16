@@ -99,7 +99,7 @@ function Experience() {
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`Tabindex와 포커스 설정, 스크롤 이동으로로 입력 순서 편의성 개선`}
+                      {`Tabindex와 포커스 설정, 스크롤 이동으로 입력 순서 편의성 개선`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
