@@ -13,40 +13,87 @@ function OtherExperience() {
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
             <h3 className="font-semibold">개인 프로젝트</h3>
           </div>
-          <div className="w-full md:w-2/3 flex flex-col pl-8 gap-[24px]">
-            <div className="flex flex-col">
-              <h5 className="text-[22px] font-bold">
-                {`Pullog - 풀업 기록 관리 분석 서비스`}
-              </h5>
-              <Link
-                href="https://pullog.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-[#00000080] flex items-center hover:underline"
-              >
-                {`https://pullog.vercel.app/`}
-                <ChevronRight size={14} color="#00000080" />
-              </Link>
+          <div className="w-full md:w-2/3 flex flex-col pl-8 gap-20">
+            <div className="flex flex-col gap-[24px]">
+              <div className="flex flex-col">
+                <h5 className="text-[22px] font-bold">
+                  {`Kooks - Custom Hooks 라이브러리`}
+                </h5>
+                <Link
+                  href="https://kooks-web.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-[#00000080] flex items-center hover:underline"
+                >
+                  {`https://kooks-web.vercel.app/`}
+                  <ChevronRight size={14} color="#00000080" />
+                </Link>
+                <Link
+                  href="https://www.npmjs.com/package/@kooks-fe/kooks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-[#00000080] flex items-center hover:underline mt-1"
+                >
+                  {`https://www.npmjs.com/package/@kooks-fe/kooks`}
+                  <ChevronRight size={14} color="#00000080" />
+                </Link>
+              </div>
+              <div className="flex flex-col gap-4 pl-2">
+                <div className="flex flex-col gap-4">
+                  <span className="font-semibold">오픈 소스 관리 경험</span>
+                  <span className="font-semibold">
+                    NPM 배포를 통한 라이브러리 공유
+                  </span>
+                  <span className="font-semibold">
+                    패키지 번들링을 통한 최적화 진행
+                  </span>
+                  <span className="font-semibold">
+                    상세한 공식 문서 사이트를 배포하여 사용법 안내
+                  </span>
+                  <span className="font-semibold">
+                    자주 사용되는 로직을 모듈화하여 재사용
+                  </span>
+                  <span className="font-semibold">
+                    Next.js 프로젝트에서 사용 가능한 Custom Hooks 라이브러리
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col gap-4 pl-2">
-              <div className="flex flex-col gap-4">
-                <span className="font-semibold">
-                  Next.js를 활용한 SEO 최적화/향상
-                </span>
-                <span className="font-semibold">
-                  Supabase를 활용하여 인증/인가 부터 데이터 관리의 백엔드 포지션
-                  경험
-                </span>
-                <span className="font-semibold">
-                  PWA를 적용하여 웹 앱 출시, 접속에 용이한 서비스 제공
-                </span>
-                <span className="font-semibold">
-                  반응형 디자인을 적용하여 데스크톱, 모바일 환경 모두 익숙한
-                  사용자 경험 제공
-                </span>
-                <span className="font-semibold">
-                  내가 좋아하는 도메인을 이해하고 기획하여 서비스 출시
-                </span>
+            <div className="flex flex-col gap-[24px]">
+              <div className="flex flex-col">
+                <h5 className="text-[22px] font-bold">
+                  {`Pullog - 풀업 기록 관리 분석 서비스`}
+                </h5>
+                <Link
+                  href="https://pullog.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-[#00000080] flex items-center hover:underline"
+                >
+                  {`https://pullog.vercel.app/`}
+                  <ChevronRight size={14} color="#00000080" />
+                </Link>
+              </div>
+              <div className="flex flex-col gap-4 pl-2">
+                <div className="flex flex-col gap-4">
+                  <span className="font-semibold">
+                    Next.js를 활용한 SEO 최적화/향상
+                  </span>
+                  <span className="font-semibold">
+                    Supabase를 활용하여 인증/인가 부터 데이터 관리의 백엔드
+                    포지션 경험
+                  </span>
+                  <span className="font-semibold">
+                    PWA를 적용하여 웹 앱 출시, 접속에 용이한 서비스 제공
+                  </span>
+                  <span className="font-semibold">
+                    반응형 디자인을 적용하여 데스크톱, 모바일 환경 모두 익숙한
+                    사용자 경험 제공
+                  </span>
+                  <span className="font-semibold">
+                    내가 좋아하는 도메인을 이해하고 기획하여 서비스 출시
+                  </span>
+                </div>
               </div>
             </div>
           </div>
