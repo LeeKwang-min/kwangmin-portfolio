@@ -38,7 +38,7 @@ const skillList = [
   {
     icon: <Settings color="#B2B2B2" size={16} />,
     title:
-      "Next.js, TypeScript, React, Next-Auth, Recoil, Tanstack-Query, React-Hook-Form",
+      "Next.js, TypeScript, React, Next-Auth, Zustand, Recoil, Tanstack-Query, React-Hook-Form",
   },
   {
     icon: <Server color="#B2B2B2" size={16} />,

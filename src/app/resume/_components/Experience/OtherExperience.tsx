@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Dot } from "lucide-react";
 import Link from "next/link";
 
 function OtherExperience() {
@@ -40,22 +40,35 @@ function OtherExperience() {
               </div>
               <div className="flex flex-col gap-4 pl-2">
                 <div className="flex flex-col gap-4">
-                  <span className="font-semibold">오픈 소스 관리 경험</span>
                   <span className="font-semibold">
-                    NPM 배포를 통한 라이브러리 공유
+                    {`반복되는 Custom Hook 로직 표준화 및 개발 생산성 향상을 위해 개발`}
                   </span>
-                  <span className="font-semibold">
-                    패키지 번들링을 통한 최적화 진행
-                  </span>
-                  <span className="font-semibold">
-                    상세한 공식 문서 사이트를 배포하여 사용법 안내
-                  </span>
-                  <span className="font-semibold">
-                    자주 사용되는 로직을 모듈화하여 재사용
-                  </span>
-                  <span className="font-semibold">
-                    Next.js 프로젝트에서 사용 가능한 Custom Hooks 라이브러리
-                  </span>
+                  <ul className="pl-2">
+                    <li className="flex gap-2 items-center">
+                      <Dot size={16} color="#00000090" />
+                      <span className="text-[#00000090] font-semibold">
+                        {`NPM 배포를 통한 라이브러리 공유와 오픈 소스 관리 경험`}
+                      </span>
+                    </li>
+                    <li className="flex gap-2 items-center">
+                      <Dot size={16} color="#00000090" />
+                      <span className="text-[#00000090] font-semibold">
+                        {`상세한 공식 문서 사이트를 배포하여 사용법 안내`}
+                      </span>
+                    </li>
+                    <li className="flex gap-2 items-center">
+                      <Dot size={16} color="#00000090" />
+                      <span className="text-[#00000090] font-semibold">
+                        {`자주 사용되는 로직을 모듈화하여 재사용`}
+                      </span>
+                    </li>
+                    <li className="flex gap-2 items-center">
+                      <Dot size={16} color="#00000090" />
+                      <span className="text-[#00000090] font-semibold">
+                        {`패키지 번들링을 통한 최적화 진행`}
+                      </span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -74,25 +87,40 @@ function OtherExperience() {
                   <ChevronRight size={14} color="#00000080" />
                 </Link>
               </div>
+
               <div className="flex flex-col gap-4 pl-2">
                 <div className="flex flex-col gap-4">
                   <span className="font-semibold">
-                    Next.js를 활용한 SEO 최적화/향상
+                    {`개인적인 운동 기록 관리를 위해 개발한 웹 서비스로 실제 유저 접속 확인 및 피드백 수집`}
                   </span>
-                  <span className="font-semibold">
-                    Supabase를 활용하여 인증/인가 부터 데이터 관리의 백엔드
-                    포지션 경험
-                  </span>
-                  <span className="font-semibold">
-                    PWA를 적용하여 웹 앱 출시, 접속에 용이한 서비스 제공
-                  </span>
-                  <span className="font-semibold">
-                    반응형 디자인을 적용하여 데스크톱, 모바일 환경 모두 익숙한
-                    사용자 경험 제공
-                  </span>
-                  <span className="font-semibold">
-                    내가 좋아하는 도메인을 이해하고 기획하여 서비스 출시
-                  </span>
+                  <ul className="pl-2">
+                    <li className="flex gap-2 items-center">
+                      <Dot size={16} color="#00000090" />
+                      <span className="text-[#00000090] font-semibold">
+                        {`Next.js를 활용한 SEO 최적화/향상을 통한 구글 1페이지 노출출`}
+                      </span>
+                    </li>
+                    <li className="flex gap-2 items-center">
+                      <Dot size={16} color="#00000090" />
+                      <span className="text-[#00000090] font-semibold">
+                        {`Supabase를 활용하여 인증/인가 부터 데이터 관리의 백엔드
+                    포지션 경험`}
+                      </span>
+                    </li>
+                    <li className="flex gap-2 items-center">
+                      <Dot size={16} color="#00000090" />
+                      <span className="text-[#00000090] font-semibold">
+                        {`PWA를 적용하여 웹 앱 출시, 접속에 용이한 서비스 제공`}
+                      </span>
+                    </li>
+                    <li className="flex gap-2 items-center">
+                      <Dot size={16} color="#00000090" />
+                      <span className="text-[#00000090] font-semibold">
+                        {`반응형 디자인을 적용하여 데스크톱, 모바일 환경 모두 동일한
+                    사용자 경험 제공`}
+                      </span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
