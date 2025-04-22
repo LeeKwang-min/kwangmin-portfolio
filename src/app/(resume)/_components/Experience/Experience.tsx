@@ -51,11 +51,6 @@ function Experience() {
           </div>
         </div>
 
-        {/* Next.js의 SSR과 페이지 로딩 속도 개선 -> hydration 활용 등
-Zustand, Recoil 선택 이유 -> Recoil을 선택한 이유
-Tanstack Query의 선택 이유 -> ?? */}
-        {/* 디자인 시스템 만들자 -> shadcn ui 사용 -> ADR 문서 사용 */}
-
         {/* Vision */}
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8 pt-2">
