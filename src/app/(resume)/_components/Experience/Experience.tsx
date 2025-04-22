@@ -66,6 +66,60 @@ function Experience() {
                 {`"인하우스 서비스 통합 대시보드 / 리포트 서비스"`}
               </p>
             </div>
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold">{`렌더링 방식을 통한 페이지 최적화`}</span>
+              <ul className="pl-2">
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`다수의 인하우스 서비스 데이터를 호출하는 구조로 인해 초기 로딩 지연 및 서버 부하 발생`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`특성과 목적에 따라 Next.js 렌더링 전략(SSR, CSR, SSG, ISR)을 적용하여 최적화 진행`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`정적 콘텐츠 중심의 서비스 렌딩 페이지는 SSG를 통해 빌드 시 정적 HTML로 생성`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`최신성과 서버 효율성이 모두 필요한 문의 내역 페이지는 ISR로 일정 주기마다 갱신`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`유저별 구조가 다르고 데이터가 바로 보여져야 하는 페이지는 SSR로 서버에서 HTML 생성 후 전달`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`사용자 인터랙션이 많고 데이터가 동적으로 바뀌는 페이지는 CSR적용`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`Lighthouse Performance(FCP, TTI, LCP) 점수 평균 10점 이상 향상`}
+                  </span>
+                  {/* SSG/SSR 기반 초기 콘텐츠 제공 방식으로 FCP, LCP 지표를 개선 */}
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`페이지 응답 속도 및 사용자 만족도 향상, 서버 부하 분산으로 시스템 효율성 개선`}
+                  </span>
+                </li>
+              </ul>
+            </div>
 
             <div className="flex flex-col gap-4 pl-2">
               <div className="flex flex-col gap-1">
@@ -202,42 +256,48 @@ function Experience() {
             </div>
             <div className="flex flex-col gap-4 pl-2">
               <div className="flex flex-col gap-1">
-                <span className="font-semibold">{`Next.js를 통한 페이지 로딩 속도 개선`}</span>
+                <span className="font-semibold">{`캐싱 전략을 통한 API 응답 속도 개선`}</span>
                 <ul className="pl-2">
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`다수의 사용자가 접속하는 서비스로 페이지 로딩 속도 개선 필요성 증가`}
+                      {`병원의 정보를 필터 기반으로 호출하는 기능에서 평균 응답 시간 약 5초 소요`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`Next.js의 SSR(Server-Side Rendering)과 Hydration 활용 결정`}
+                      {`필터 조건이 자주 변경되는 특성상 사용자 불편 및 서버 부하 증가`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`Lighthouse Performance 점수 향상 및 페이지 초기 로딩 속도 개선`}
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col gap-1">
-                <span className="font-semibold">{`추천 검색어 호출 기능에 Debounce 적용`}</span>
-                <ul className="pl-2">
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
-                      {`사용자의 키 입력마다 API 호출이 발생하여 서버 부하 및 비용 상승이 우려`}
+                      {`Tanstack Query의 캐싱 전략을 적용하여 성능 개선 진행행`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`서버 비용 약 30% 절감 및 응답 속도 개선으로 사용자 만족도 향상`}
+                      {`queryKey를 필터 조건에 따라 설정하여 조건별 캐시를 분리`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`staleTime을 정책에 맞춰 DB 갱신 주기에 맞춰 재호출 되로록 설정`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`동일 조건에 대한 API 호출을 대폭 감소시키고 캐시 데이터를 즉시 반환하여 응답`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`사용자 이탈률 감소 및 서버 부하 완화로 전반적 성능 최적화`}
                     </span>
                   </li>
                 </ul>
@@ -286,6 +346,24 @@ function Experience() {
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
                       {`탐색 소요 시간 감소 및 탐색 횟수 감소로 사용자 경험 개선`}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold">{`추천 검색어 호출 기능에 Debounce 적용`}</span>
+                <ul className="pl-2">
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`사용자의 키 입력마다 API 호출이 발생하여 서버 부하 및 비용 상승이 우려`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`서버 비용 약 30% 절감 및 응답 속도 개선으로 사용자 만족도 향상`}
                     </span>
                   </li>
                 </ul>
