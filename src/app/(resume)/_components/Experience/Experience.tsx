@@ -78,39 +78,38 @@ function Experience() {
                 <li className="flex gap-2 items-center">
                   <Dot size={16} color="#00000090" />
                   <span className="text-[#00000090] font-semibold">
-                    {`특성과 목적에 따라 Next.js 렌더링 전략(SSR, CSR, SSG, ISR)을 적용하여 최적화 진행`}
+                    {`페이지 특성과 목적에 따라 Next.js 렌더링 전략(SSR, CSR, SSG, ISR)을 적용하여 최적화 진행`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`정적 콘텐츠 중심의 렌딩 페이지는 SSG를 적용하여 빌드 타임에 HTML로 생성, 사용자 요청 시 빠른 응답 제공`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`최신성과 서버 효율성이 모두 중요한 문의 내역 페이지는 ISR을 적용, 일정 주기마다 데이터 갱신하여 서버 부담 최소화`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`유저별로 구조가 다르고 데이터를 즉시 보여줘야 하는 대시보드 페이지는 SSR을 적용하여 최신 데이터를 서버에서 바로 렌더링`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`사용자 인터랙션이 많고 데이터가 자주 변경되는 페이지는 CSR로 처리하여 클라이언트 단에서 유연하게 상태 관리`}
                   </span>
                 </li>
                 <li className="flex gap-2 items-center">
                   <Dot size={16} color="#00000090" />
                   <span className="text-[#00000090] font-semibold">
-                    {`정적 콘텐츠 중심의 서비스 렌딩 페이지는 SSG를 통해 빌드 시 정적 HTML로 생성`}
+                    {`개선을 통해 Lighthouse Performance 지표(FCP, TTI, LCP)에서 평균 10점 이상 향상`}
                   </span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`최신성과 서버 효율성이 모두 필요한 문의 내역 페이지는 ISR로 일정 주기마다 갱신`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`유저별 구조가 다르고 데이터가 바로 보여져야 하는 페이지는 SSR로 서버에서 HTML 생성 후 전달`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`사용자 인터랙션이 많고 데이터가 동적으로 바뀌는 페이지는 CSR적용`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`Lighthouse Performance(FCP, TTI, LCP) 점수 평균 10점 이상 향상`}
-                  </span>
-                  {/* SSG/SSR 기반 초기 콘텐츠 제공 방식으로 FCP, LCP 지표를 개선 */}
                 </li>
                 <li className="flex gap-2 items-center">
                   <Dot size={16} color="#00000090" />
@@ -125,46 +124,46 @@ function Experience() {
               <div className="flex flex-col gap-1">
                 <span className="font-semibold">{`디자인 시스템 구축`}</span>
                 <ul className="pl-2">
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
                     <span className="text-[#00000090] font-semibold">
-                      {`3개의 인하우스 서비스에서 동일한 디자인이 사용되는 것을 확인`}
+                      {`3개의 인하우스 서비스에서 유사한 UI 컴포넌트가 반복 사용되는 것을 확인하고, 유지보수성과 개발 효율을 고려해 공통 디자인 시스템의 필요성을 인지`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`공통 디자인 시스템 구축의 필요성을 인지`}
+                      {`도입 기술의 타당성과 확장성을 정리한 ADR 문서를 작성하고 디자인 시스템 구축 계획 수립`}
                     </span>
                   </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
                     <span className="text-[#00000090] font-semibold">
-                      {`ADR 문서 작성 및 디자인 시스템 구축 계획 수립`}
+                      {`커스터마이징이 용이한 headless UI 기반의 Shadcn UI를 도입하여, 디자인과 기능이 분리된 구조를 통해 다양한 서비스 요구사항에 유연하게 대응`}
                     </span>
                   </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
                     <span className="text-[#00000090] font-semibold">
-                      {`소스 코드가 직접 포함되는 장점이 있는 Shadcn UI 도입`}
+                      {`버튼, 입력 필드 등 공통 컴포넌트와 스타일 설정 파일을 모듈화하여 반복 작업을 줄이고, UI 구현 및 유지보수 시간 절감`}
                     </span>
                   </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
                     <span className="text-[#00000090] font-semibold">
-                      {`공통 컴포넌트 및 스타일 설정 파일 개발을 통해 개발 및 UI 작업 시간 단축`}
+                      {`디자이너와 컴포넌트 구조를 함께 정리하고, 다른 프론트엔드 개발자들과는 공통 컴포넌트를 공유하여 협업 효율을 높임`}
                     </span>
                   </li>
                 </ul>
               </div>
 
               <div className="flex flex-col gap-1">
-                <span className="font-semibold">{`DnD를 통한 차트 정렬 기능 개발`}</span>
+                <span className="font-semibold">{`차트 정렬 UX 개선 및 성능 최적화`}</span>
                 <ul className="pl-2">
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`기존 차트 정렬 방식이 제목 중심의 모달 방식으로 정렬 과정에서 불편함 발생`}
+                      {`기존 차트 정렬 방식이 제목 중심의 모달 방식으로 정렬 과정에서 직관적이지 않다는 불편함 발생`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
@@ -176,7 +175,31 @@ function Experience() {
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`차트 정렬 시간 약 50% 단축 및 계약사의 긍정적 피드백을 통한 비즈니스 가치 향상`}
+                      {`도입 후 차트 정렬 시간 약 50% 단축 및 계약사의 긍정적 피드백을 통한 비즈니스 가치 향상`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`하지만, DnD를 통한 정렬 도중 불필요한 차트의 잦은 리렌더링과 API 호출 발생 확인`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`Tanstack Query 캐시 정책을 데이터 정책 단위와 동일하게 설정하여 필요할 때만 API 호출 진행`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`메모이제이션(Memoization)을 통해 실제 데이터 변경 시에만 리렌더링 진행`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`UX 개선과 성능 최적화를 함께 달성하여, 사용자 만족도와 시스템 효율성 모두 향상`}
                     </span>
                   </li>
                 </ul>
@@ -200,37 +223,13 @@ function Experience() {
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`최소한의 보일러플레이트로 상태 관리가 가능한 Zustand를 채택하여 직관적이며 간결한 상태 관리`}
+                      {`최소한의 보일러플레이트로 상태 관리가 가능한 Zustand를 채택, 직관적이며 간결한 상태 관리`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
                       {`상태 관리 복잡성 감소 및 개발 생산성 향상`}
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col gap-1">
-                <span className="font-semibold">{`차트 리렌더링/API 호출 최적화`}</span>
-                <ul className="pl-2">
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
-                      {`DnD를 통한 정렬 과정에서 선택한 차트의 잦은 리렌더링 발생 확인`}
-                    </span>
-                  </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
-                      {`Tanstack Query 캐시 정책을 데이터 적재 단위로 설정하여 API 호출 횟수 감소`}
-                    </span>
-                  </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
-                      {`메모이제이션(Memoization)을 통해 데이터 변경 시에만 리렌더링 진행`}
                     </span>
                   </li>
                 </ul>
@@ -273,7 +272,7 @@ function Experience() {
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`Tanstack Query의 캐싱 전략을 적용하여 성능 개선 진행행`}
+                      {`Tanstack Query의 캐싱 전략을 적용하여 성능 개선 진행`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
@@ -429,6 +428,38 @@ function Experience() {
             <div className="flex flex-col gap-4 pl-2">
               <div className="flex flex-col gap-1">
                 <span className="font-semibold">
+                  느린 응답 속도 개선을 위한 낙관적 업데이트 적용
+                </span>
+                <ul className="pl-2">
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`테이블 데이터 조회시, API 응답에 약 5초가 소요되어, 데이터 조작 후 재조회하는 과정에 사용자 불만이 지속해서 발생`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`Tanstack Query의 낙관적 업데이트를 적용하여 데이터 조작 후 테이블 UI를 즉시 업데이트하여 사용자 체감 속도 개선`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`동시에 API 실패 상황에 대비해 이전 상태를 롤백할 수 있도록 onError 처리, 데이터 정합성 이슈도 함께 방지`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`사용자들로 부터 매우 긍정적인 피드백과 자연스럽고 빠른 사용 경험 제공`}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold">
                   버튼 중복 클릭 방지 기능 개발
                 </span>
                 <ul className="pl-2">
@@ -461,25 +492,31 @@ function Experience() {
 
               <div className="flex flex-col gap-1">
                 <span className="font-semibold">
-                  Lazy Loading 적용 및 코드 스플리팅을 통한 초기 로딩 속도 개선
+                  Lazy Loading을 통한 초기 로딩 속도 개선
                 </span>
                 <ul className="pl-2">
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
                     <span className="text-[#00000090] font-semibold">
-                      {`초기 페이지 로딩 시간이 길어 사용자의 서비스 체류 시간 및 만족도가 낮음 (로딩 평균 5초)`}
+                      {`SSR 페이지로 구현되어 데이터 호출에 평균 5초 이상의 시간이 걸리며 초기 페이지 로딩 또한 5초 이상의 시간이 걸리는 문제 발생`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`화면 구성 요소의 렌더링 타이밍을 분리하여 데이터 의존적인 테이블 영역은 Lazy Loading 방식으로 지연 렌더링 적용`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`코드 스플리팅 적용 후 초기 로딩 속도 2초로 단축(약 60% 개선)`}
+                      {`지연 로딩 중에는 로딩 UI를 표시해 사용자가 시스템이 작동 중임을 인지하도록 처리`}
                     </span>
                   </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
                     <span className="text-[#00000090] font-semibold">
-                      {`사용자 피드백에서 성능 만족도 향상 확인`}
+                      {`결과적으로 체감 로딩 시간은 5초 → 1초로 단축, 사용자 피드백에서 성능 향상에 대한 긍정적 반응 확인`}
                     </span>
                   </li>
                 </ul>
@@ -617,20 +654,30 @@ function Experience() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <span className="font-semibold">
-                  사전 허용된 사용자만 접근 가능하도록 처리
-                </span>
+                <span className="font-semibold">인증 기반 접근 제한 처리</span>
                 <ul className="pl-2">
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`고가의 데이터를 사용하는 서비스로 사용 제한이 필요한 서비스`}
+                      {`고가의 데이터를 포함한 서비스 특성상 외부 노출 및 무단 접근에 대한 우려가 제기됨`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`Next-Auth와 Middleware를 활용하여 자사, 계약사 사용자만 접근 가능하도록 처리`}
+                      {`자사 및 계약사 사용자만 서비스를 이용할 수 있도록 제한해야 한다는 보안 요구사항 도출`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`Next-Auth와 Middleware를 활용하여 미인증 사용자 및 미승인 도메인의 접근을 차단`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`데이터 무단 접근을 방지하고 보안 수준을 강화, 사용자 신뢰도 및 서비스 안정성 향상에 기여`}
                     </span>
                   </li>
                 </ul>
