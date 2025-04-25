@@ -67,54 +67,48 @@ function Experience() {
               </p>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="font-semibold">{`렌더링 방식을 통한 페이지 최적화`}</span>
+              <span className="font-semibold">{`차트 정렬 UX 개선 및 성능 최적화`}</span>
               <ul className="pl-2">
                 <li className="flex gap-2 items-center">
                   <Dot size={16} color="#00000090" />
                   <span className="text-[#00000090] font-semibold">
-                    {`다수의 인하우스 서비스 데이터를 호출하는 구조로 인해 초기 로딩 지연 및 서버 부하 발생`}
+                    {`기존 차트 정렬 방식이 제목 중심의 모달 방식으로 정렬 과정에서 직관적이지 않다는 불편함 발생`}
                   </span>
                 </li>
                 <li className="flex gap-2 items-center">
                   <Dot size={16} color="#00000090" />
                   <span className="text-[#00000090] font-semibold">
-                    {`페이지 특성과 목적에 따라 Next.js 렌더링 전략(SSR, CSR, SSG, ISR)을 적용하여 최적화 진행`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-start">
-                  <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`정적 콘텐츠 중심의 렌딩 페이지는 SSG를 적용하여 빌드 타임에 HTML로 생성, 사용자 요청 시 빠른 응답 제공`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-start">
-                  <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`최신성과 서버 효율성이 모두 중요한 문의 내역 페이지는 ISR을 적용, 일정 주기마다 데이터 갱신하여 서버 부담 최소화`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-start">
-                  <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`유저별로 구조가 다르고 데이터를 즉시 보여줘야 하는 대시보드 페이지는 SSR을 적용하여 최신 데이터를 서버에서 바로 렌더링`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-start">
-                  <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`사용자 인터랙션이 많고 데이터가 자주 변경되는 페이지는 CSR로 처리하여 클라이언트 단에서 유연하게 상태 관리`}
+                    {`react-dnd를 사용하여 차트 리스트에서 DnD 방식으로 직관적 차트 순서 변경 기능 개발`}
                   </span>
                 </li>
                 <li className="flex gap-2 items-center">
                   <Dot size={16} color="#00000090" />
                   <span className="text-[#00000090] font-semibold">
-                    {`개선을 통해 Lighthouse Performance 지표(FCP, TTI, LCP)에서 평균 10점 이상 향상`}
+                    {`도입 후 차트 정렬 시간 약 50% 단축 및 계약사의 긍정적 피드백을 통한 비즈니스 가치 향상`}
                   </span>
                 </li>
                 <li className="flex gap-2 items-center">
                   <Dot size={16} color="#00000090" />
                   <span className="text-[#00000090] font-semibold">
-                    {`페이지 응답 속도 및 사용자 만족도 향상, 서버 부하 분산으로 시스템 효율성 개선`}
+                    {`하지만, DnD를 통한 정렬 도중 불필요한 차트의 잦은 리렌더링과 API 호출 발생 확인`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`Tanstack Query 캐시 정책을 데이터 정책 단위와 동일하게 설정하여 필요할 때만 API 호출 진행`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`메모이제이션(Memoization)을 통해 실제 데이터 변경 시에만 리렌더링 진행`}
+                  </span>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Dot size={16} color="#00000090" />
+                  <span className="text-[#00000090] font-semibold">
+                    {`UX 개선과 성능 최적화를 함께 달성하여, 사용자 만족도와 시스템 효율성 모두 향상`}
                   </span>
                 </li>
               </ul>
@@ -158,48 +152,42 @@ function Experience() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <span className="font-semibold">{`차트 정렬 UX 개선 및 성능 최적화`}</span>
+                <span className="font-semibold">{`렌더링 방식을 통한 페이지 최적화`}</span>
                 <ul className="pl-2">
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`기존 차트 정렬 방식이 제목 중심의 모달 방식으로 정렬 과정에서 직관적이지 않다는 불편함 발생`}
+                      {`다수의 인하우스 서비스 데이터를 호출하는 구조로 인해 초기 로딩 지연 및 서버 부하 발생`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`react-dnd를 사용하여 차트 리스트에서 DnD 방식으로 직관적 차트 순서 변경 기능 개발`}
+                      {`페이지 특성과 목적에 따라 Next.js 렌더링 전략(SSR, CSR, SSG, ISR)을 적용하여 최적화 진행`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`정적 콘텐츠 중심의 렌딩 페이지는 SSG를 적용하여 빌드 타임에 HTML로 생성, 사용자 요청 시 빠른 응답 제공`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`최신성과 서버 효율성이 모두 중요한 문의 내역 페이지는 ISR을 적용, 주기별로 데이터를 갱신하여 서버 부담 최소화`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`도입 후 차트 정렬 시간 약 50% 단축 및 계약사의 긍정적 피드백을 통한 비즈니스 가치 향상`}
+                      {`개선을 통해 Lighthouse Performance 지표(FCP, TTI, LCP)에서 평균 10점 이상 향상`}
                     </span>
                   </li>
                   <li className="flex gap-2 items-center">
                     <Dot size={16} color="#00000090" />
                     <span className="text-[#00000090] font-semibold">
-                      {`하지만, DnD를 통한 정렬 도중 불필요한 차트의 잦은 리렌더링과 API 호출 발생 확인`}
-                    </span>
-                  </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
-                      {`Tanstack Query 캐시 정책을 데이터 정책 단위와 동일하게 설정하여 필요할 때만 API 호출 진행`}
-                    </span>
-                  </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
-                      {`메모이제이션(Memoization)을 통해 실제 데이터 변경 시에만 리렌더링 진행`}
-                    </span>
-                  </li>
-                  <li className="flex gap-2 items-center">
-                    <Dot size={16} color="#00000090" />
-                    <span className="text-[#00000090] font-semibold">
-                      {`UX 개선과 성능 최적화를 함께 달성하여, 사용자 만족도와 시스템 효율성 모두 향상`}
+                      {`페이지 응답 속도 및 사용자 만족도 향상, 서버 부하 분산으로 시스템 효율성 개선`}
                     </span>
                   </li>
                 </ul>
