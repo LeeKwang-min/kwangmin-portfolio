@@ -10,7 +10,7 @@ const skills = {
     "React",
     "Next-Auth",
     "Zustand",
-    "Recoil",
+    "Jotai",
     "Tanstack Query",
     "React Hook Form",
   ],
@@ -191,7 +191,7 @@ export default function Page() {
         <div className="mx-auto max-w-5xl px-6 py-12 space-y-32 text-gray-900 dark:text-gray-100">
           {/* About Section */}
           <section id="about" className="space-y-8">
-            <h2 className="text-4xl font-bold">이광민이란 개발자는</h2>
+            <h2 className="text-4xl font-bold">{`이광민이란 개발자는`}</h2>
             <div className="flex flex-col space-y-6">
               <div className="w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center mb-4">
@@ -215,11 +215,14 @@ export default function Page() {
                     왜 프론트엔드를 선택했나요?
                   </h3>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  사용자가 직접 만나는 화면을 책임지는 프론트엔드에 매력을
-                  느꼈고, 사용자 경험을 개선하는 것에 큰 보람을 느낍니다. 코드
-                  한 줄이 사용자 경험에 직접적인 영향을 미치는 프론트엔드 개발의
-                  즉각적인 피드백과 성과를 보는 것이 저의 동기부여가 됩니다.
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                  {`저는 사용자와 직접 소통하며 가치를 전달하는 일에 큰 보람을 느낍니다.
+                  
+                  프론트엔드는 사용자와 가장 먼저 만나 상호작용하는 영역으로, 
+                  사용자의 경험을 개선함으로써 편의성뿐만 아니라 비즈니스 가치까지 높일 수 있다는 점에 매력을 느꼈습니다.
+
+                  실제 서비스의 사용자 경험을 개선하고, 그 결과로 긍정적인 피드백과 서비스 가치 향상을 이끌어내는 과정에서 
+                  프론트엔드 개발자로서의 자부심과 보람을 느끼고 있습니다.`}
                 </p>
               </div>
 
@@ -245,11 +248,14 @@ export default function Page() {
                     실무에서 가장 중요하게 생각하는 것은 무엇인가요?
                   </h3>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  기술 스택보다 비즈니스와 사용자에게 가치를 주는 방향으로
-                  개발하는 것을 중요하게 생각합니다. 코드 품질, 성능 최적화,
-                  접근성, 그리고 확장 가능한 아키텍처 설계를 통해 장기적인
-                  비즈니스 성장에 기여하는 개발을 지향합니다.
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                  {`제가 실무에서 가장 중요하게 생각하는 가치는 '사용자 경험'과 '커뮤니케이션'입니다.
+                  
+                  작은 변화라도 사용자 경험을 개선하면 비즈니스 가치가 크게 향상된다는 것을 경험하며,
+                  항상 사용자의 입장에서 생각하고 더 나은 경험을 제공하기 위해 노력하고 있습니다.
+                  
+                  또한, 좋은 결과물은 원활한 커뮤니케이션에서 나온다고 믿습니다.
+                  다양한 의견을 존중하고 조율하는 과정들이 저와 팀원들의 성장이 된다고 생각합니다.`}
                 </p>
               </div>
 
@@ -275,11 +281,14 @@ export default function Page() {
                     가장 기억에 남는 문제 해결 경험은 무엇인가요?
                   </h3>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  5초 이상 걸리던 테이블 데이터 조회를 Tanstack Query의 낙관적
-                  업데이트와 Lazy Loading을 적용하여 1초 이내로 단축시키고,
-                  사용자 만족도를 극적으로 향상시켰던 경험입니다. 성능 최적화를
-                  통해 비즈니스 지표 개선에 직접적인 기여를 한 경험이었습니다.
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                  {`사용자 불만을 칭찬으로 바꾼 경험이 가장 기억에 남습니다.
+
+                  라이프로그 테이블 페이지의 데이터 조회 속도가 5초 이상 걸려 많은 불만이 있었는데,
+                  Lazy Loading과 낙관적 업데이트를 통해 1초 이내로 단축시켜 사용자 만족도를 향상시켰던 경험입니다.
+                  
+                  이 개선을 통해 서비스 운영 과정에서 발생하던 사용자 불만을 긍정적 피드백으로 변경한 것은 물론,
+                  계약사의 만족도를 높이는 것에 큰 기여를 한 매우 의미있는 경험이었습니다.`}
                 </p>
               </div>
             </div>
@@ -403,11 +412,20 @@ export default function Page() {
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    인하우스 백오피스 및 서비스 개발을 통해 UX 최적화, 성능
-                    개선, 디자인 시스템 구축, 실시간 채팅 시스템 개발 등 다양한
-                    프로젝트를 리딩하며 비즈니스 가치를 향상시켰습니다.
-                  </p>
+                  <div>
+                    <h4 className="text-md font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                      역할
+                    </h4>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                      {`인하우스 서비스와 백오피스의 프론트엔드 개발을 리딩하였습니다.
+
+                      디자인 시스템 구축과 효과적인 상태 관리와 API 호출 관리 등
+                      사용자 경험 개선과 성능 최적화를 통해 비즈니스 가치를 향상시켰습니다.
+
+                      개발자 사이의 소통 뿐만 아니라 비개발자와의 소통에서 지식을 공유하고 이해하며
+                      원활한 커뮤니케이션을 통해 함께 일하기 좋은 팀원으로 평가 받았습니다.`}
+                    </p>
+                  </div>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 rounded-full text-sm font-medium text-indigo-800 dark:text-indigo-200">
                       프론트엔드 리드
@@ -420,6 +438,61 @@ export default function Page() {
                     </span>
                     <span className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 rounded-full text-sm font-medium text-indigo-800 dark:text-indigo-200">
                       실시간 시스템
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mr-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                      {`네이버 커넥트재단 - 부스트캠프`}
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      2021.07 ~ 2021.12
+                    </p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-md font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                      성과
+                    </h4>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                      {`웹 개발 프로세스와 기초 지식에 대한 이해를 하였습니다.
+
+                      웹 개발에 필요한 JS 언어 기반의 기초 지식을 학습하고,
+                      팀 프로젝트를 통해 실무 경험을 쌓았습니다.
+
+                      다양한 프로젝트 경험을 통해 협업 능력과 문제 해결 능력을 향상시켰습니다.`}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm font-medium text-blue-800 dark:text-blue-200">
+                      웹 개발자 양성
+                    </span>
+                    <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm font-medium text-blue-800 dark:text-blue-200">
+                      팀 프로젝트
+                    </span>
+                    <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm font-medium text-blue-800 dark:text-blue-200">
+                      협업 경험
                     </span>
                   </div>
                 </div>
