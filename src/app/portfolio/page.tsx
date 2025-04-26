@@ -3,6 +3,22 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
+// 프로젝트 타입 정의
+interface TroubleshootingItem {
+  problem: string;
+  solution: string;
+  result: string;
+}
+
+interface Project {
+  title: string;
+  features: string;
+  techStack: string;
+  contribution: string[];
+  troubleshooting: TroubleshootingItem[];
+  period: string;
+}
+
 const skills = {
   FE: [
     "Next.js",
@@ -19,55 +35,101 @@ const skills = {
   "협업 도구": ["Git", "Jira", "Confluence", "Figma"],
 };
 
-const projects = [
+const projects: Project[] = [
   {
     title: "Vision - 인하우스 통합 대시보드/리포트",
     features:
-      "Next.js 렌더링 전략(SSR, SSG, ISR, CSR) 최적화로 초기 로딩 지연 및 서버 부하 문제 해결.",
-    techStack: "Next.js, React, Tanstack Query, Tailwind CSS",
-    contribution: "페이지 특성별 최적화 전략 수립 및 렌더링 방식 적용 주도.",
-    troubleshooting: {
-      problem: "다수 데이터 호출로 인한 초기 로딩 지연 및 서버 부하.",
-      solution: "페이지 특성에 맞게 SSR, CSR, SSG, ISR을 구분 적용.",
-      result: "Lighthouse 성능 지표 평균 10점 이상 향상 및 서버 부하 분산.",
-    },
-    period: "2025.04 진행 중",
+      "3개의 인하우스 서비스 데이터를 통합하여, 차트를 활용한 대시보드 및 리포트 형태로 시각화하는 서비스입니다.",
+    techStack: "Next.js, React, Tanstack Query, Tailwind CSS, Zustand",
+    contribution: [
+      "대시보드와 리포트 화면을 구현하고, 사용자가 차트를 자유롭게 정렬할 수 있는 DnD 기능을 개발했습니다.",
+      "공통 UI 컴포넌트를 설계해 디자인 시스템을 구축하고, 반복되는 개발 작업을 줄여 협업 생산성을 높였습니다.",
+      "각 페이지 특성에 따라 SSR, SSG, ISR, CSR 전략을 적절히 조합하여 초기 로딩 속도를 최적화했습니다.",
+    ],
+    troubleshooting: [
+      {
+        problem:
+          "다수의 데이터 의존성으로 인해 페이지 렌더링 속도가 느려지는 문제가 발생했습니다.",
+        solution:
+          "Tanstack Query의 캐싱 전략을 적용하여 서버 부하를 줄이고 성능을 개선했습니다.",
+        result:
+          "사용자 이탈률을 감소시키고, 시스템 전반의 응답성을 향상시켰습니다.",
+      },
+      {
+        problem:
+          "공통 컴포넌트 부재로 인해 UI 일관성과 유지보수성이 떨어지는 문제가 발생했습니다.",
+        solution:
+          "Shadcn UI를 기반으로 커스텀 디자인 시스템을 구축하여 공통 컴포넌트를 표준화했습니다.",
+        result:
+          "UI 품질을 향상시키고, 개발 생산성과 협업 효율을 크게 높였습니다.",
+      },
+    ],
+    period: "2025.04 ~ 진행 중",
   },
   {
-    title: "디자인 시스템 구축",
-    features: "Shadcn UI 기반 공통 컴포넌트 설계 및 구축.",
-    techStack: "React, Shadcn UI, Tailwind CSS",
-    contribution: "디자인 시스템 구조 설계 및 공통 컴포넌트 개발 주도.",
-    troubleshooting: {
-      problem: "UI 컴포넌트 중복 및 유지보수성 문제.",
-      solution: "공통 디자인 시스템 구축 및 모듈화.",
-      result: "UI 구현/유지보수 시간 대폭 절감.",
-    },
-    period: "2025.02 진행 중",
+    title: "라이프로그 통합 관리 백오피스",
+    features:
+      "사용자의 다양한 라이프로그 데이터를 통합 관리하고, 이를 기반으로 코칭 및 미디어 콘텐츠를 생성하는 내부 백오피스입니다.",
+    techStack: "Next.js, React, Tanstack Query, Tailwind CSS, Zustand",
+    contribution: [
+      "데이터 조작 시 체감 속도를 개선하기 위해 낙관적 업데이트를 적용하여, 수정/삭제 후 즉시 화면에 반영되는 부드러운 UX를 구현했습니다.",
+      "데이터가 많은 페이지는 Lazy Loading을 적용해 초기 로딩 시간을 줄였고, 사용자 경험을 자연스럽게 개선했습니다.",
+      "Jira 기반 이슈 관리를 도입해 비개발 부서와도 명확한 일정 공유와 효율적인 협업이 가능하도록 했습니다.",
+    ],
+    troubleshooting: [
+      {
+        problem:
+          "테이블 재조회 시 체감 응답 속도가 느려지는 문제가 발생했습니다.",
+        solution:
+          "Tanstack Query의 낙관적 업데이트 기능(onMutate, onError, onSettled)을 적용하여 즉각 반영 및 롤백 처리를 구현했습니다.",
+        result: "빠른 조작 응답과 안정적인 데이터 정합성을 모두 확보했습니다.",
+      },
+      {
+        problem: "초기 페이지 로딩이 과도하게 오래 걸리는 문제가 발생했습니다.",
+        solution:
+          "데이터 의존적인 영역에 Lazy Loading을 적용하여 필요 시에만 로딩하도록 최적화했습니다.",
+        result:
+          "체감 로딩 시간을 5초에서 1초로 대폭 단축하며 사용자 만족도를 높였습니다.",
+      },
+    ],
+    period: "2024.01 ~ 2024.12",
   },
   {
-    title: "KB 검진 대행 서비스",
-    features: "필터 기반 병원 검색 성능 개선 및 서버 부하 30% 완화.",
-    techStack: "Next.js, React, Tanstack Query",
-    contribution: "캐싱 전략 개선 및 API 최적화 담당.",
-    troubleshooting: {
-      problem: "병원 검색 API 호출 시 평균 5초 지연.",
-      solution: "queryKey 분리 및 staleTime 정책 설정.",
-      result: "응답 속도 개선 및 서버 부하 완화.",
-    },
+    title: "검진 대행 서비스",
+    features:
+      "직원용 건강검진 예약과 결과 확인을 지원하는 서비스로, 모바일과 데스크탑 모두 최적화된 경험을 제공합니다.",
+    techStack: "Next.js, React, Tanstack Query, Tailwind CSS, Zustand",
+    contribution: [
+      "병원 필터 조회 기능을 최적화하여 사용자가 빠르게 검색할 수 있도록 개선했습니다.",
+      "추천 검색어 입력 시 서버 부하를 줄이기 위해 Debounce 처리를 적용했습니다.",
+      "필터와 정렬 조건을 쿼리 파라미터로 관리하여, 페이지 이동이나 재접속 시에도 일관된 검색 조건이 유지되도록 구현했습니다.",
+    ],
+    troubleshooting: [
+      {
+        problem:
+          "병원 필터 조회 시 평균 5초 이상 소요되는 문제가 발생했습니다.",
+        solution:
+          "Tanstack Query 캐싱 전략과 queryKey 분리를 통해 조건별로 캐시를 관리했습니다.",
+        result: "API 호출 수를 대폭 줄이고 빠른 필터 조회 속도를 제공했습니다.",
+      },
+      {
+        problem:
+          "추천 검색어 입력 시 매 타이핑마다 API 호출이 발생해 서버 부하가 증가하는 문제가 있었습니다.",
+        solution:
+          "Debounce 기법을 적용하여 일정 시간 이후에만 호출이 발생하도록 최적화했습니다.",
+        result:
+          "서버 비용 약 30% 절감 및 입력 반응 속도 개선 효과를 얻었습니다.",
+      },
+      {
+        problem:
+          "페이지 이동이나 새로고침 시 필터 조건이 초기화되는 문제가 발생했습니다.",
+        solution:
+          "쿼리 파라미터를 활용하여 필터 및 정렬 상태를 URL에 반영하도록 처리했습니다.",
+        result:
+          "조건 재설정 없이 검색 조건이 유지되어 사용자 편의성이 크게 향상되었습니다.",
+      },
+    ],
     period: "2024.12 ~ 2025.04",
-  },
-  {
-    title: "Pullog - 턱걸이 기록 관리 서비스",
-    features: "Next.js + Supabase 기반 PWA 개인 프로젝트.",
-    techStack: "Next.js, Supabase, Tailwind CSS",
-    contribution: "서비스 전체 설계 및 개발, SEO 최적화.",
-    troubleshooting: {
-      problem: "운동 기록 관리의 접근성 및 SEO 부족.",
-      solution: "PWA 적용 및 SEO 최적화.",
-      result: "구글 1페이지 노출 및 사용자 피드백 수집.",
-    },
-    period: "2024.03 ~ 2024.06",
   },
 ];
 
@@ -513,7 +575,7 @@ export default function Page() {
                     {project.title}
                   </h3>
                   <p>
-                    <strong>주요 기능 및 특징</strong>
+                    <strong>프로젝트 소개</strong>
                     <br />
                     {project.features}
                   </p>
@@ -527,30 +589,54 @@ export default function Page() {
                       </span>
                     ))}
                   </div>
-                  <p>
+                  <span className="flex flex-col gap-2">
                     <strong>기여도</strong>
-                    <br />
-                    {project.contribution}
-                  </p>
-                  <div className="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg space-y-2">
+                    <ul className="list-disc list-inside pl-2">
+                      {project.contribution.map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </span>
+                  <div className="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg space-y-4">
                     <p className="font-semibold text-blue-700 dark:text-blue-300">
                       트러블 슈팅
                     </p>
-                    <p>
-                      <strong>문제</strong>
-                      <br />
-                      {project.troubleshooting.problem}
-                    </p>
-                    <p>
-                      <strong>해결</strong>
-                      <br />
-                      {project.troubleshooting.solution}
-                    </p>
-                    <p>
-                      <strong>결과</strong>
-                      <br />
-                      {project.troubleshooting.result}
-                    </p>
+                    <ul className="space-y-6 list-none">
+                      {project.troubleshooting.map((item, index) => (
+                        <li
+                          key={index}
+                          className="space-y-3 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700"
+                        >
+                          <div className="flex items-center gap-2 mb-2">
+                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                            <p className="font-semibold text-gray-800 dark:text-gray-200">
+                              문제 상황
+                            </p>
+                          </div>
+                          <p className="text-gray-700 dark:text-gray-300 pl-5">
+                            {item.problem}
+                          </p>
+                          <div className="flex items-center gap-2 mt-4 mb-2">
+                            <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                            <p className="font-semibold text-gray-800 dark:text-gray-200">
+                              해결 방법
+                            </p>
+                          </div>
+                          <p className="text-gray-700 dark:text-gray-300 pl-5">
+                            {item.solution}
+                          </p>
+                          <div className="flex items-center gap-2 mt-4 mb-2">
+                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                            <p className="font-semibold text-gray-800 dark:text-gray-200">
+                              개선 결과
+                            </p>
+                          </div>
+                          <p className="text-gray-700 dark:text-gray-300 pl-5">
+                            {item.result}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     {project.period}
