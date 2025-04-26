@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 // 프로젝트 타입 정의
 interface TroubleshootingItem {
@@ -17,6 +18,8 @@ interface Project {
   contribution: string[];
   troubleshooting: TroubleshootingItem[];
   period: string;
+  image?: string;
+  link?: string;
 }
 
 const skills = {
@@ -37,10 +40,35 @@ const skills = {
 
 const projects: Project[] = [
   {
-    title: "Vision - 인하우스 통합 대시보드/리포트",
+    title: "Kooks - Custom Hooks 라이브러리 (Side)",
+    features:
+      "Next.js 기반 프로젝트에서 반복적으로 사용하는 로직을 표준화하여 재사용 하기 위한 Custom Hooks 라이브러리입니다.",
+    techStack: "Next.js, React, TypeScript, NPM",
+    contribution: [
+      "자주 사용하는 로직을 Custom Hook 형태로 정리하여 모듈화 하는 중입니다.",
+      "코드를 최적화하고 번들링하여 NPM 패키지로 배포했습니다.",
+      "공식 문서 사이트를 제작해 사용 방법을 명확하게 안내하고, 오픈 소스 관리 경험을 쌓았습니다.",
+    ],
+    troubleshooting: [
+      {
+        problem:
+          "개인 프로젝트와 회사 프로젝트에서 유사한 로직이 반복 작성되는 것을 확인했습니다.",
+        solution:
+          "Custom Hook을 라이브러리 형태로 정리하여 재사용성을 높이고, 프로젝트 개발 생산성을 향상시키고자 하였습니다.",
+        result:
+          "완성 된다면 반복 로직 작성 시간을 단축하고, 코드 품질과 일관성을 높일 것으로 기대됩니다.",
+      },
+    ],
+    period: "2024.03 ~ 진행중",
+    image: "/assets/kooks_web.png",
+    link: "https://kooks-web.vercel.app/",
+  },
+  {
+    title: "인하우스 통합 대시보드/리포트 (Company)",
     features:
       "3개의 인하우스 서비스 데이터를 통합하여, 차트를 활용한 대시보드 및 리포트 형태로 시각화하는 서비스입니다.",
-    techStack: "Next.js, React, Tanstack Query, Tailwind CSS, Zustand",
+    techStack:
+      "Next.js, React, Tanstack Query, Tailwind CSS, Zustand, Shadcn UI, Recharts",
     contribution: [
       "대시보드와 리포트 화면을 구현하고, 사용자가 차트를 자유롭게 정렬할 수 있는 DnD 기능을 개발했습니다.",
       "공통 UI 컴포넌트를 설계해 디자인 시스템을 구축하고, 반복되는 개발 작업을 줄여 협업 생산성을 높였습니다.",
@@ -67,10 +95,11 @@ const projects: Project[] = [
     period: "2025.04 ~ 진행 중",
   },
   {
-    title: "라이프로그 통합 관리 백오피스",
+    title: "라이프로그 통합 관리 백오피스 (Company)",
     features:
       "사용자의 다양한 라이프로그 데이터를 통합 관리하고, 이를 기반으로 코칭 및 미디어 콘텐츠를 생성하는 내부 백오피스입니다.",
-    techStack: "Next.js, React, Tanstack Query, Tailwind CSS, Zustand",
+    techStack:
+      "Next.js, React, Tanstack Query, Tailwind CSS, Recoil, Shadcn UI",
     contribution: [
       "데이터 조작 시 체감 속도를 개선하기 위해 낙관적 업데이트를 적용하여, 수정/삭제 후 즉시 화면에 반영되는 부드러운 UX를 구현했습니다.",
       "데이터가 많은 페이지는 Lazy Loading을 적용해 초기 로딩 시간을 줄였고, 사용자 경험을 자연스럽게 개선했습니다.",
@@ -87,7 +116,7 @@ const projects: Project[] = [
       {
         problem: "초기 페이지 로딩이 과도하게 오래 걸리는 문제가 발생했습니다.",
         solution:
-          "데이터 의존적인 영역에 Lazy Loading을 적용하여 필요 시에만 로딩하도록 최적화했습니다.",
+          "데이터 의존적인 영역에 Lazy Loading을 적용하여 별도 컴포넌트로 로딩하도록 최적화했습니다.",
         result:
           "체감 로딩 시간을 5초에서 1초로 대폭 단축하며 사용자 만족도를 높였습니다.",
       },
@@ -95,10 +124,11 @@ const projects: Project[] = [
     period: "2024.01 ~ 2024.12",
   },
   {
-    title: "검진 대행 서비스",
+    title: "검진 대행 서비스 (Company)",
     features:
       "직원용 건강검진 예약과 결과 확인을 지원하는 서비스로, 모바일과 데스크탑 모두 최적화된 경험을 제공합니다.",
-    techStack: "Next.js, React, Tanstack Query, Tailwind CSS, Zustand",
+    techStack:
+      "Next.js, React, Tanstack Query, Tailwind CSS, Recoil, Shadcn UI",
     contribution: [
       "병원 필터 조회 기능을 최적화하여 사용자가 빠르게 검색할 수 있도록 개선했습니다.",
       "추천 검색어 입력 시 서버 부하를 줄이기 위해 Debounce 처리를 적용했습니다.",
@@ -130,6 +160,39 @@ const projects: Project[] = [
       },
     ],
     period: "2024.12 ~ 2025.04",
+  },
+  {
+    title: "Pullog - 풀업 기록 관리 서비스 (Side)",
+    features:
+      "개인 운동 기록을 관리하고, 성취 과정을 시각적으로 분석할 수 있도록 만든 풀업(턱걸이) 기록 관리 웹 애플리케이션입니다.",
+    techStack: "Next.js, React, Supabase, Tailwind CSS, PWA",
+    contribution: [
+      "운동 기록 입력, 수정, 삭제 기능을 구현하고 Supabase를 활용해 인증 및 데이터 관리를 처리했습니다.",
+      "SEO 최적화를 통해 구글 검색 결과 1페이지 노출을 달성했습니다.",
+      "PWA 기능을 적용하여 모바일 홈 화면에서 앱처럼 사용할 수 있도록 최적화했습니다.",
+      "반응형 디자인을 적용해 다양한 디바이스에서 일관된 사용자 경험을 제공했습니다.",
+    ],
+    troubleshooting: [
+      {
+        problem:
+          "인증/인가 및 데이터 관리를 안정적으로 처리할 백엔드 환경이 필요한 상황이었습니다.",
+        solution:
+          "Supabase를 도입하여 인증, 권한 관리, 데이터베이스 연동을 손쉽게 구축했습니다.",
+        result:
+          "짧은 개발 기간 안에 백엔드 기능을 안정적으로 구현하고 서비스 런칭에 성공했습니다.",
+      },
+      {
+        problem:
+          "검색 엔진 최적화(SEO)가 부족하여 구글 검색시 서비스 노출이 되지 않았습니다.",
+        solution:
+          "메타 태그 최적화와 웹 표준 준수 등의 SEO 최적화 작업을 진행했습니다.",
+        result:
+          "구글 검색 결과 1페이지 노출 및 신규 사용자 유입 증가를 달성했습니다.",
+      },
+    ],
+    period: "2024.02 ~ 2024.03",
+    image: "/assets/pullog.png",
+    link: "https://pullog.vercel.app/",
   },
 ];
 
@@ -564,16 +627,60 @@ export default function Page() {
 
           {/* Projects Section */}
           <section id="projects" className="space-y-8 animate-fade-in-up">
-            <h2 className="text-4xl font-bold">주요 프로젝트</h2>
+            <div className="flex justify-between items-center">
+              <h2 className="text-4xl font-bold">주요 프로젝트</h2>
+              <a
+                href="/resume"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 flex items-center gap-2 text-sm"
+              >
+                <span>모든 프로젝트</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
             <div className="space-y-10">
               {projects.map((project, idx) => (
                 <div
                   key={idx}
                   className="border rounded-2xl p-8 bg-gray-50 dark:bg-gray-800 shadow-md space-y-4"
                 >
-                  <h3 className="text-2xl font-bold text-blue-600">
-                    {project.title}
-                  </h3>
+                  <div className="flex justify-between items-start">
+                    <h3 className="text-2xl font-bold text-blue-600">
+                      {project.title}
+                    </h3>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 hover:underline text-black font-medium rounded-lg transition-colors duration-300 flex items-center gap-1 text-sm"
+                      >
+                        <span>사이트 방문</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
                   <p>
                     <strong>프로젝트 소개</strong>
                     <br />
@@ -588,6 +695,19 @@ export default function Page() {
                         {tech}
                       </span>
                     ))}
+                  </div>
+                  <div className="flex justify-center">
+                    {project.image && (
+                      <div className="w-[70%] overflow-hidden rounded-lg shadow-md">
+                        <Image
+                          src={project.image}
+                          alt={`${project.title} 이미지`}
+                          className="w-full h-auto object-cover"
+                          width={1000}
+                          height={1000}
+                        />
+                      </div>
+                    )}
                   </div>
                   <span className="flex flex-col gap-2">
                     <strong>기여도</strong>
