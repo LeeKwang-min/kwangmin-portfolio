@@ -66,7 +66,7 @@ function Gate() {
   const text = useTypewriter(phrases);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-700 to-blue-600 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 p-4">
       <div
         style={{ width: "720px", minWidth: "720px" }}
         className="flex flex-col items-center"
@@ -87,7 +87,7 @@ function Gate() {
           </div>
           <div
             className="terminal-body bg-gray-800 rounded-b-lg p-6 flex flex-col items-start justify-start border border-gray-700"
-            style={{ height: "400px", backdropFilter: "blur(8px)" }}
+            style={{ height: "400px" }}
           >
             <div className="terminal-content w-full space-y-2">
               <div className="terminal-line flex items-start">
@@ -171,15 +171,15 @@ function Gate() {
         >
           <Link
             href="/resume"
-            className="px-8 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-700 transition-colors text-lg font-medium min-w-[200px] text-center"
+            className="px-8 py-3 bg-neutral-700 text-white rounded-lg hover:bg-neutral-600 transition-colors text-lg font-medium min-w-[200px] text-center"
           >
-            이력서
+            이력서 보기
           </Link>
           <Link
             href="/portfolio"
-            className="px-8 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-700 transition-colors text-lg font-medium min-w-[200px] text-center"
+            className="px-8 py-3 bg-neutral-700 text-white rounded-lg hover:bg-neutral-600 transition-colors text-lg font-medium min-w-[200px] text-center"
           >
-            포트폴리오
+            포트폴리오 보기
           </Link>
         </div>
       </div>
