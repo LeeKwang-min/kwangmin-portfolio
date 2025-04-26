@@ -182,6 +182,10 @@ function Gate() {
             포트폴리오 보기
           </Link>
         </div>
+
+        <footer className="mt-12 text-center text-gray-400 text-sm">
+          <p>© {new Date().getFullYear()} 이광민. All rights reserved.</p>
+        </footer>
       </div>
     </div>
   );
