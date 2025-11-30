@@ -1,22 +1,8 @@
+import ExperienceDate from "@/components/common/ExperienceDate";
 import { Dot, Quote } from "lucide-react";
 import React from "react";
 
 function Experience() {
-  const calcDate = () => {
-    const startDate = new Date("2022-02-07");
-    const today = new Date();
-
-    const years = today.getFullYear() - startDate.getFullYear();
-    const months = today.getMonth() - startDate.getMonth();
-
-    const totalMonths = years * 12 + months;
-
-    const resultYears = Math.floor(totalMonths / 12);
-    const resultMonths = totalMonths % 12;
-
-    return `${resultYears}년 ${resultMonths}개월`;
-  };
-
   return (
     <section className="mb-4 pb-20">
       <h2 className="text-3xl font-semibold mb-4 pb-2">Work Experience</h2>
@@ -25,8 +11,7 @@ function Experience() {
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
             <h3 className="font-semibold">휴레이포지티브</h3>
             <h4 className="font-semibold">
-              2022.02 - 현재{" "}
-              <span className="font-bold">{`(${calcDate()})`}</span>
+              2022.02 - 현재 <ExperienceDate />
             </h4>
             <h4 className="text-xs mt-[3px] text-[#00000080] font-semibold">
               프론트엔드 개발자

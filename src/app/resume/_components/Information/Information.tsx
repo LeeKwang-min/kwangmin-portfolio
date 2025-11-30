@@ -42,11 +42,11 @@ const skillList = [
   },
   {
     icon: <Server color="#B2B2B2" size={16} />,
-    title: "Supabase, Node.js, Docker, Vercel",
+    title: "Supabase, Express, Docker, Vercel",
   },
   {
     icon: <Paintbrush color="#B2B2B2" size={16} />,
-    title: "Tailwind CSS, Shadcn UI, Recharts, Chart.js",
+    title: "Tailwind CSS, D3.js, Shadcn UI, Recharts, Chart.js",
   },
   {
     icon: <BookMarked color="#B2B2B2" size={16} />,
