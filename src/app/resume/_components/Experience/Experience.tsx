@@ -25,7 +25,7 @@ function Experience() {
                 fill="#00000080"
                 className="h-10 transform scale-x-[-1] border-none"
               />
-              {`UX 중심의 백오피스 및 서비스 개발/유지보수로 비즈니스 가치 향상`}
+              {`안정적이고 효율적인 개발을 통한 비즈니스 가치 향상`}
               <Quote
                 size={16}
                 color="#00000090"
@@ -36,12 +36,233 @@ function Experience() {
           </div>
         </div>
 
-        {/* Vision */}
+        {/* 삼성헬스 웹 PoC */}
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8 pt-2">
             <h4 className="font-semibold flex justify-end w-full gap-2">
               <span className="font-bold">{`(진행중)`}</span>
-              2025.04 ~
+              2025.09 ~
+            </h4>
+          </div>
+          <div className="w-full md:w-2/3 flex flex-col pl-8 gap-[24px]">
+            <div className="flex flex-col">
+              <h5 className="text-[22px] font-bold">{`삼성헬스 웹 PoC`}</h5>
+              <p className="font-bold text-[#00000080]">
+                {`"삼성헬스를 웹 앱으로 구현한 웹 프로젝트"`}
+              </p>
+            </div>
+            <div className="flex flex-col gap-4 pl-2">
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold">{`데이터 연산 로직 공통화`}</span>
+                <ul className="pl-2">
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`자원이 많이 드는 날짜 연산 로직으로 인한 TBT, FCP 성능 저하 발생`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`날짜 연산을 라이브러리가 아닌 값을 통해 계산하는 로직으로 변경`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`공통 유틸로 만들어 모든 페이지에 적용`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`날짜 계산 로직에 변경이 필요한 경우 공통 유틸 업데이트 후 적용하여 모든 페이지 빠른 대응`}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold">{`화면 성능 최적화`}</span>
+                <ul className="pl-2">
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">{`네이티브 환경의 서비스를 웹으로 구현하여 성능을 네이티브와 동일하게 유지하는 필수 요구사항`}</span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`SSR을 사용해 사용자에게 데이터가 모두 그려진 화면을 노출`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`이 과정에서 데이터 호출과 연산에 시간이 많이 소요되어 실제 화면에 접근하는데 걸리는 시간도 많이 들고 TBT, FCP 성능 지표도 낮게 측정`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`모든 데이터를 그리지 않고 화면에 표시 될 부분과 슬라이드 가능한 범위를 미리 계산하여 해당 부분만 렌더링 진행`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`초기 렌더링은 일부 데이터만 호출하고 웹 워커를 사용하여 화면 병목을 방지하고 데이터 호출 진행`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`TBT 점수는 평균 700ms에서 100ms로`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`FCP는 평균 1.5초에서 1초 이하로 줄여 성능 최적화 진행`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">{`Lighthouse Performance 지표를 평균 60점에서 모든 페이지 90점대로 상승`}</span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`클라이언트의 의문을 해결하고, 실제 상용화 가능한 버전을 만드는 추가 계약 진행`}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold">{`데이터 구조 설계`}</span>
+                <ul className="pl-2">
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`로컬DB를 조회하는 기존 구조에서 웹 서비스에 맞는 데이터 구조 설계 및 호출 구조 설계 필요`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`Next.js의 Route Handlers와 MongoDB를 활용하여 데이터 호출 구조 설계`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`시간 단위 데이터에 알맞는 확장성 있는 데이터 구조 설계 진행`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`추가 요구사항이 있을 경우에도 유연한 대처 진행`}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold">{`차트 개발`}</span>
+                <ul className="pl-2">
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`다양한 스타일의 공통화 되지 않은 차트 구현이 필요`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`가장 커스텀이 편하고 가벼운 D3.js를 사용하여 차트와 슬라이드 기능 구현`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`수면 단계, 혈압, 혈당 등의 다양한 차트 구현`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`기존 서비스의 디자인과 동일한 디자인과 UX 구현`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Dot size={16} color="#00000090" className="mt-1 min-w-4" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`웹 환경인지 모를 정도로 네이티브 환경과 동일하다는 피드백`}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 시니어케어 */}
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8 pt-2">
+            <h4 className="font-semibold flex justify-end w-full gap-2">
+              <span className="font-bold">{`(진행중)`}</span>
+              2025.06 ~
+            </h4>
+          </div>
+          <div className="w-full md:w-2/3 flex flex-col pl-8 gap-[24px]">
+            <div className="flex flex-col">
+              <h5 className="text-[22px] font-bold">{`시니어케어`}</h5>
+              <p className="font-bold text-[#00000080]">
+                {`"시니어 케어 서비스 플랫폼"`}
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4 pl-2">
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold">{`배포 자동화`}</span>
+                <ul className="pl-2">
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`k8s 인프라 환경의 배포가 필요한 상황`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`새로운 버전에 대한 배포가 지속적으로 요구`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`git action을 통한 git tag 기반의 배포 자동화 구축`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`구글 알림을 통한 배포 성공 여부 알림 기능 구축`}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Vision */}
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full md:w-1/3 mb-4 md:mb-0 flex justify-end pr-8 pt-2">
+            <h4 className="font-semibold flex justify-end w-full gap-2">
+              <span className="font-bold">{`(약 3개월)`}</span>
+              2025.04 ~ 2025.06
             </h4>
           </div>
           <div className="w-full md:w-2/3 flex flex-col pl-8 gap-[24px]">
@@ -51,55 +272,55 @@ function Experience() {
                 {`"인하우스 서비스 통합 대시보드 / 리포트 서비스"`}
               </p>
             </div>
-            <div className="flex flex-col gap-1">
-              <span className="font-semibold">{`차트 정렬 UX 개선 및 성능 최적화`}</span>
-              <ul className="pl-2">
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`기존 차트 정렬 방식이 제목 중심의 모달 방식으로 정렬 과정에서 직관적이지 않다는 불편함 발생`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`react-dnd를 사용하여 차트 리스트에서 DnD 방식으로 직관적 차트 순서 변경 기능 개발`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`도입 후 차트 정렬 시간 약 50% 단축 및 계약사의 긍정적 피드백을 통한 비즈니스 가치 향상`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`하지만, DnD를 통한 정렬 도중 불필요한 차트의 잦은 리렌더링과 API 호출 발생 확인`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`Tanstack Query 캐시 정책을 데이터 정책 단위와 동일하게 설정하여 필요할 때만 API 호출 진행`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`메모이제이션(Memoization)을 통해 실제 데이터 변경 시에만 리렌더링 진행`}
-                  </span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Dot size={16} color="#00000090" />
-                  <span className="text-[#00000090] font-semibold">
-                    {`UX 개선과 성능 최적화를 함께 달성하여, 사용자 만족도와 시스템 효율성 모두 향상`}
-                  </span>
-                </li>
-              </ul>
-            </div>
-
             <div className="flex flex-col gap-4 pl-2">
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold">{`차트 정렬 UX 개선 및 성능 최적화`}</span>
+                <ul className="pl-2">
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`기존 차트 정렬 방식이 제목 중심의 모달 방식으로 정렬 과정에서 직관적이지 않다는 불편함 발생`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`react-dnd를 사용하여 차트 리스트에서 DnD 방식으로 직관적 차트 순서 변경 기능 개발`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`도입 후 차트 정렬 시간 약 50% 단축 및 계약사의 긍정적 피드백을 통한 비즈니스 가치 향상`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`하지만, DnD를 통한 정렬 도중 불필요한 차트의 잦은 리렌더링과 API 호출 발생 확인`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`Tanstack Query 캐시 정책을 데이터 정책 단위와 동일하게 설정하여 필요할 때만 API 호출 진행`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`메모이제이션(Memoization)을 통해 실제 데이터 변경 시에만 리렌더링 진행`}
+                    </span>
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <Dot size={16} color="#00000090" />
+                    <span className="text-[#00000090] font-semibold">
+                      {`UX 개선과 성능 최적화를 함께 달성하여, 사용자 만족도와 시스템 효율성 모두 향상`}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
               <div className="flex flex-col gap-1">
                 <span className="font-semibold">{`디자인 시스템 구축`}</span>
                 <ul className="pl-2">
